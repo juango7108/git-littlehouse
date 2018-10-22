@@ -1,7 +1,6 @@
-<html>
-<head>
-<link href="css/table.css" rel="stylesheet">
-</head>
+@extends('sistema.tablas')
+@section('pie')
+@section('tabla')
 <h1>Reporte de Productos de Almacen</h1>
 <table border= 1>
 <th colspan="7"><center>Reporte de Productos</center></th>
@@ -39,8 +38,19 @@
 	</tr>
 @endforeach
 </table>
-</body>
-</html>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>  
+<br>
+<br>
+<br>
+@stop
+@stop
+@section('pie')
+@stop
 
 
 

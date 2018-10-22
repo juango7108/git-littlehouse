@@ -1,10 +1,9 @@
-<html>
-<head>
-<link href="css/table.css" rel="stylesheet">
-</head>
-<h1>Reporte de Entradas</h1>
+@extends('sistema.tablas')
+@section('pie')
+@section('tabla')
+<h1>Reporte de Salidas</h1>
 <table border= 1>
-<th colspan="5"><center>Reporte de Entradas</center></th>
+<th colspan="5"><center>Reporte de Salidas</center></th>
 <tr>
 <td>ID_Slida</td><td>Fecha de Salida</td>
 <td>Responsable</td><td>ID de Usuario</td></td><td>Operaciones</td>
@@ -27,9 +26,20 @@ Eliminar
 </tr>
 @endforeach
 </table>
-</body>
-</html>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>  
+<br>
+<br>
+<br>
+<br>
+@stop
+@stop
+@section('pie')
+@stop
 
 
 

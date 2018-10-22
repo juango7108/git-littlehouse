@@ -14,6 +14,7 @@
 //index
 Route::get('/index','littlehouse@home');
 Route::get('/altas','littlehouse@altas');
+Route::get('/tablas','littlehouse@tablas');
 //
 //altacliente
 Route::get('/altacliente','littlehouse@altacliente');

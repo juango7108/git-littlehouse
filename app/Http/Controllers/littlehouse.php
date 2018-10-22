@@ -29,6 +29,10 @@ class littlehouse extends Controller
     {
         return view("sistema.altas");
     }
+	public function tablas()
+    {
+        return view("sistema.tablas");
+    }
    //alta cliente//
     public function altacliente()
     {

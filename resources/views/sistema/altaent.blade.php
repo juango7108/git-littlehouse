@@ -1,9 +1,10 @@
-<html>
-<body>
-<h1>Alta de entrada</h1>
-<br>
+@extends('sistema.altas')
+
+@section('pie')
+@section('alta')
 <table>
 <form action =  "{{route('guardaent')}}" method = "POST" >
+<th>Regsitrar Entrada</th>
 {{csrf_field()}}
 
 <tr><td>@if($errors->first('id_entrada')) 
@@ -16,28 +17,28 @@ Clave de Etrada</td><td><input type = 'text' name = 'id_entrada' value="{{($iden
 @if($errors->first('fecha_entrada')) 
 <i> {{ $errors->first('fecha_entrada') }} </i> 
 @endif	
-Fecha de Entrada</td><td><input type = 'text' name  ='fecha_entrada' value="{{old('fecha_entrada')}}">
+Fecha de Entrada</td><td><input type = 'text' name  ='fecha_entrada' value="{{old('fecha_entrada')}}" placeholder="año-mes-dia*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('proveedor')) 
 <i> {{ $errors->first('proveedor') }} </i> 
 @endif	
-Nombre del Proveedor</td><td><input type = 'text' name  ='proveedor' value="{{old('proveedor')}}">
+Nombre del Proveedor</td><td><input type = 'text' name  ='proveedor' value="{{old('proveedor')}}" placeholder="Campo Obligatorio*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('folio_factura')) 
 <i> {{ $errors->first('folio_factura') }} </i> 
 @endif	
-Folio de la Factura</td><td><input type  ='text' name ='folio_factura' value="{{old('folio_factura')}}">
+Folio de la Factura</td><td><input type  ='text' name ='folio_factura' value="{{old('folio_factura')}}" placeholder="Campo Obligatorio*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('fecha_factura')) 
 <i> {{ $errors->first('fecha_factura') }} </i> 
 @endif	
-Fecha de la Factura</td><td><input type  ='text' name ='fecha_factura' value="{{old('fecha_factura')}}">
+Fecha de la Factura</td><td><input type  ='text' name ='fecha_factura' value="{{old('fecha_factura')}}" placeholder="año-mes-dia*">
 </td></tr>
 
 <tr><td>
@@ -46,13 +47,18 @@ Seleccione ID del Usuario a Cargo</td><td><select name = 'id_usuario'>
 			<option value = '{{$cr->id_usuario}}'>{{$cr->nombre}}</option>
 			@endforeach
                   </select></td></tr>
-				  <tr><td>
-<input type = 'submit' value = 'Guardar'>
-</td></tr>
+				<tr><td><input type = 'submit' class="form-control" value = 'Guardar'></td>
+<td><input type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
 </form>
 </table>
-</body>
-</html>
+<br>
+<br>
+<br>
+<br>
+@stop
+@stop
+@section('pie')
+@stop
 
 
 

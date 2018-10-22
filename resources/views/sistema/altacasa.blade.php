@@ -1,8 +1,8 @@
-<html>
-<body>
-<h1>Alta Casa</h1>
-<br>
+@extends('sistema.altas')
 
+@section('pie')
+@section('alta')
+<table>
 <form action =  "{{route('guardacasa')}}" method = "POST" enctype='multipart/form-data'>
 
 <table>
@@ -20,21 +20,21 @@ Clave</td><td><input type = 'text' name = 'id_casa' value="{{($idcasa)}}" readon
 @if($errors->first('dimenciones')) 
 <i> {{ $errors->first('dimenciones') }} </i> 
 @endif	
-Dimenciones de la casa</td><td><input type = 'text' name  ='dimenciones' value="{{old('dimenciones')}}">
+Dimenciones de la casa</td><td><input type = 'text' name  ='dimenciones' value="{{old('dimenciones')}}" placeholder="Base * Altura*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('color')) 
 <i> {{ $errors->first('color') }} </i> 
 @endif	
-Color</td><td><input type = 'text' name  ='color' value="{{old('color')}}">
+Color</td><td><input type = 'text' name  ='color' value="{{old('color')}}" placeholder="Color de la Casa*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('descripcion')) 
 <i> {{ $errors->first('descripcion') }} </i> 
 @endif	
-Descripción</td><td><input type  ='text' name ='descripcion' value="{{old('descripcion')}}">
+Descripción</td><td><input type  ='text' name ='descripcion' value="{{old('descripcion')}}" placeholder="Especificaciones*">
 </td></tr>
 <tr><td>
 @if($errors->first('archivo')) 
@@ -43,8 +43,16 @@ Descripción</td><td><input type  ='text' name ='descripcion' value="{{old('desc
 Seleccione foto</td><td><input type='file' name ='archivo'>
 </td></tr>
 
-<tr><td><input type = 'submit' value = 'Guardar'></td></tr>
+<tr><td><input type = 'submit' class="form-control" value = 'Guardar'></td>
+<td><input type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
 </form>
 </table>
-</body>
-</html>
+<br>
+<br>
+<br>
+<br>
+@stop
+@stop
+@section('pie')
+@stop
+

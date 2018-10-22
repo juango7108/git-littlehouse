@@ -1,7 +1,6 @@
-<html>
-<head>
-<link href="css/table.css" rel="stylesheet">
-</head>
+@extends('sistema.tablas')
+@section('pie')
+@section('tabla')
 <h1>Reporte de Casas</h1>
 <table border= 1>
 <th colspan="6"><center>Reporte de Casas</center></th>
@@ -45,9 +44,17 @@ Restaurar
 </tr>
 @endforeach
 </table>
-</body>
-</html>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>  
+<br>
+@stop
+@stop
+@section('pie')
+@stop
 
 
 

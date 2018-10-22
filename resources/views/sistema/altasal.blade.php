@@ -1,9 +1,10 @@
-<html>
-<body>
-<h1>Alta de salidas</h1>
-<br>
+@extends('sistema.altas')
+
+@section('pie')
+@section('alta')
 <table>
 <form action =  "{{route('guardasal')}}" method = "POST" >
+<th>Regsitrar Salida</th>
 {{csrf_field()}}
 
 <tr><td>@if($errors->first('id_salida')) 
@@ -16,14 +17,14 @@ Clave de Salida</td><td><input type = 'text' name = 'id_salida' value="{{($idsal
 @if($errors->first('fecha_salida')) 
 <i> {{ $errors->first('fecha_salida') }} </i> 
 @endif	
-Fecha de Salida</td><td><input type = 'text' name  ='fecha_salida' value="{{old('fecha_salida')}}">
+Fecha de Salida</td><td><input type = 'text' name  ='fecha_salida' value="{{old('fecha_salida')}}" placeholder="Año-Mes-Dias">
 </td></tr>
 
 <tr><td>
 @if($errors->first('responsable')) 
 <i> {{ $errors->first('responsable') }} </i> 
 @endif	
-Responsable</td><td><input type = 'text' name  ='responsable' value="{{old('responsable')}}">
+Responsable</td><td><input type = 'text' name  ='responsable' value="{{old('responsable')}}" placeholder="Persona a Cargo">
 </td></tr>
 
 <tr><td>
@@ -32,13 +33,22 @@ Seleccione ID del Usuario a Cargo</td><td><select name = 'id_usuario'>
 			<option value = '{{$cr->id_usuario}}'>{{$cr->nombre}}</option>
 			@endforeach
                   </select></td></tr>
-				  <tr><td>
-<input type = 'submit' value = 'Guardar'>
-</td></tr>
+<hr style="color: #0056b2;" />
+<tr><td><input type = 'submit' class="form-control" value = 'Guardar'></td>
+<td><input type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
 </form>
 </table>
-</body>
-</html>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@stop
+@stop
+@section('pie')
+@stop
 
 
 

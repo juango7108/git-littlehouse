@@ -1,7 +1,7 @@
-<html>
-<body>
-<h1>Alta Producto de Almacén</h1>
-<br>
+@extends('sistema.altas')
+
+@section('pie')
+@section('alta')
 
 <form action =  "{{route('guardalmacen')}}" method = "POST">
 
@@ -19,38 +19,44 @@ Clave de Producto</td><td><input type = 'text' name = 'id_producto' value="{{($i
 @if($errors->first('producto')) 
 <i> {{ $errors->first('producto') }} </i> 
 @endif	
-Producto</td><td><input type = 'text' name = 'producto' value="{{old('producto')}}">
+Producto</td><td><input type = 'text' name = 'producto' value="{{old('producto')}}" placeholder="Nombre de Producto*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('cantidad_minima')) 
 <i> {{ $errors->first('cantidad_minima') }} </i> 
 @endif	
-Cantidad Minima del Producto</td><td><input type = 'text' name  ='cantidad_minima' value="{{old('cantidad_minima')}}">
+Cantidad Minima del Producto</td><td><input type = 'text' name  ='cantidad_minima' value="{{old('cantidad_minima')}}" placeholder="Representar en Unidad">
 </td></tr>
 
 <tr><td>
 @if($errors->first('costo')) 
 <i> {{ $errors->first('costo') }} </i> 
 @endif	
-Costo del Producto</td><td><input type = 'text' name  ='costo' value="{{old('costo')}}">
+Costo del Producto</td><td><input type = 'text' name  ='costo' value="{{old('costo')}}" placeholder="Agregar Decimal">
 </td></tr>
 
 <tr><td>
 @if($errors->first('costo_promedio')) 
 <i> {{ $errors->first('costo_promedio') }} </i> 
 @endif	
-Costo Promedio del Producto</td><td><input type  ='text' name ='costo_promedio' value="{{old('costo_promedio')}}">
+Costo Promedio del Producto</td><td><input type  ='text' name ='costo_promedio' value="{{old('costo_promedio')}}" placeholder="Cantidad*Costo">
 </td></tr>
 <tr><td>
 @if($errors->first('existencia_actual')) 
 <i> {{ $errors->first('existencia_actual') }} </i> 
 @endif	
-Existencia Actual del Producto</td><td><input type='text' name ='existencia_actual' value="{{old('existencia_actual')}}">
+Existencia Actual del Producto</td><td><input type='text' name ='existencia_actual' value="{{old('existencia_actual')}}" placeholder="Representar en Unidad">
 </td></tr>
 
-<tr><td><input type = 'submit' value = 'Guardar'></td></tr>
+<tr><td><input type = 'submit' class="form-control" value = 'Guardar'></td>
+<td><input type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
 </form>
 </table>
-</body>
-</html>
+<br>
+<br>
+<br>
+@stop
+@stop
+@section('pie')
+@stop
