@@ -64,7 +64,12 @@ Route::get('/fisicas/{id_casa}','littlehouse@fisicas')->name('fisicas');
 //altausuarios
 Route::get('/altausuarios','littlehouse@altausuarios');
 Route::POST('/guardausuarios','littlehouse@guardausuarios')->name('guardausuarios');
-
+Route::get('/reporteus','littlehouse@reporteus');
+Route::get('/modificaus/{id_usuario}','littlehouse@modificaus')->name('modificaus');
+Route::POST('/guardamodificaus','littlehouse@guardamodificaus')->name('guardamodificaus');
+Route::get('/eliminaus/{id_usuario}','littlehouse@eliminaus')->name('eliminaus');
+Route::get('/restauraus/{id_usuario}','littlehouse@restauraus')->name('restauraus');
+Route::get('/fisicaus/{id_usuario}','littlehouse@fisicaus')->name('fisicaus');
 //////////////
 
 //Entradas

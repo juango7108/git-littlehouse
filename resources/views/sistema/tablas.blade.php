@@ -80,6 +80,7 @@
                             <li><a href="{{URL::action('littlehouse@altacasa')}}">Nueva Casa</a></li>
 							<li><a href="{{URL::action('littlehouse@altaent')}}">Entradas </a></li>
 							<li><a href="{{URL::action('littlehouse@altasal')}}">Salidas </a></li>
+							<li><a href="{{URL::action('littlehouse@altausuarios')}}">Usuarios </a></li>
                         </ul>
                     </li>
 					<li class="submenu">
@@ -95,6 +96,7 @@
 							<li><a href="{{URL::action('littlehouse@reportealmacen')}}">PAlmacen</a></li>
 							<li><a href="{{URL::action('littlehouse@reportent')}}">Entradas</a></li>
 							<li><a href="{{URL::action('littlehouse@reportesal')}}">Salidas</a></li>
+							<li><a href="{{URL::action('littlehouse@reporteus')}}">Usuarios</a></li>
                         </ul>
                     </li>
                     <li><a href="calendar.html"><i class="glyphicon glyphicon-calendar"></i> Calendario</a></li>

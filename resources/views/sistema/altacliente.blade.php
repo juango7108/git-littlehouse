@@ -12,49 +12,49 @@
 @if($errors->first('id_cliente')) 
 <i> {{ $errors->first('id_cliente') }} </i> 
 @endif	
-Clave</td><td><input type = 'text' name = 'id_cliente' value="{{($idcs)}}" readonly='readonly'>
+Clave</td><td><input type = 'text' class="form-control" name = 'id_cliente' value="{{($idcs)}}" readonly='readonly'>
 </td></tr>
 
 <tr><td>
 @if($errors->first('nombre')) 
 <i> {{ $errors->first('nombre') }} </i> 
 @endif	
-Nombre(s)</td><td><input type = 'text' name  ='nombre' value="{{old('nombre')}}" placeholder="Introduce Nombre(s)*">
+Nombre(s)</td><td><input type = 'text' class="form-control" name  ='nombre' value="{{old('nombre')}}" placeholder="Introduce Nombre(s)*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('apellido')) 
 <i> {{ $errors->first('apellido') }} </i> 
 @endif	
-Apellido(s)</td><td><input type = 'text' name  ='apellidos' value="{{old('apellidos')}}" placeholder="Introduce Apellido(s)*">
+Apellido(s)</td><td><input type = 'text' class="form-control" name  ='apellidos' value="{{old('apellidos')}}" placeholder="Introduce Apellido(s)*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('direccion')) 
 <i> {{ $errors->first('direccion') }} </i> 
 @endif	
-Dirección</td><td><input type  ='text' name ='direccion' value="{{old('direccion')}}" placeholder="Introduce Dir. con Num. calle*">
+Dirección</td><td><input type  ='text' class="form-control" name ='direccion' value="{{old('direccion')}}" placeholder="Introduce Dir. con Num. calle*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('cp')) 
 <i> {{ $errors->first('cp') }} </i> 
 @endif	
-Codigo Postal</td><td> <input type = 'text'name = 'cp' value="{{old('cp')}}" placeholder="Codigo Postal*">
+Codigo Postal</td><td> <input type = 'text' class="form-control" name = 'cp' value="{{old('cp')}}" placeholder="Codigo Postal*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('tel')) 
 <i> {{ $errors->first('tel') }} </i> 
 @endif	
-Telefono </td><td><input type = 'text'name = 'tel' value="{{old('tel')}}" placeholder="Num. Telefono*">
+Telefono </td><td><input type = 'text' class="form-control" name = 'tel' value="{{old('tel')}}" placeholder="Num. Telefono*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('correo')) 
 <i> {{ $errors->first('correo') }} </i> 
 @endif	
-Correo</td><td><input type = 'correo'name = 'correo' value="{{old('correo')}}" placeholder="@gmail, @hotmail, etc" >
+Correo</td><td><input type = 'correo' class="form-control" name = 'correo' value="{{old('correo')}}" placeholder="@gmail, @hotmail, etc" >
 </td></tr>
 <tr><td>
 Activo<input type = 'radio' name = 'activo' value = 'SI' checked>SI

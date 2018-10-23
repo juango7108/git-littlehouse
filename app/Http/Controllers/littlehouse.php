@@ -234,7 +234,7 @@ class littlehouse extends Controller
 		    $pedid->id_cliente = $request->id_cliente;
 			$pedid->id_usuario = $request->id_usuario;
 			$pedid->save();
-			$proceso2 = "Alta Pedido";
+			$proceso2 = "Excelente!!";
 			$mensaje2 = "Registro guardado correctamente";
 		    return view ('sistema.mensaje2')
 			->with('proceso2',$proceso2)
@@ -403,7 +403,7 @@ class littlehouse extends Controller
 			$cas->descripcion= $request->descripcion;
 			$cas->archivo = $img2;
 			$cas->save();
-			$proceso1 = "Alta Casas";
+			$proceso1 = "Excelente!!";
 			$mensaje1 = "Registro guardado correctamente";
 		    return view ('sistema.mensaje1')
 			->with('proceso1',$proceso1)
@@ -561,7 +561,7 @@ class littlehouse extends Controller
 			$alm->costo_promedio=$request->costo_promedio;
 			$alm->existencia_actual=$request->existencia_actual;
 			$alm->save();
-			$proceso3 = "Alta Producto de Almacen";
+			$proceso3 = "Excelente!!";
 			$mensaje3 = "Registro guardado correctamente";
 		    return view ('sistema.mensaje3')
 			->with('proceso3',$proceso3)
@@ -706,8 +706,8 @@ class littlehouse extends Controller
 			$ent->fecha_factura = $request->fecha_factura;
 			$ent->id_usuario = $request->id_usuario;
 			$ent->save();
-			$proceso4 = "ALTA DE Entrada";
-			$mensaje4 = "REgistro guardado correctamente";
+			$proceso4 = "Excelente!!";
+			$mensaje4 = "Registro guardado correctamente";
 		    return view ('sistema.mensaje4')
 			->with('proceso4',$proceso4)
 			->with('mensaje4',$mensaje4);
@@ -847,8 +847,8 @@ class littlehouse extends Controller
 			$sal->responsable = $request->responsable;
 			$sal->id_usuario = $request->id_usuario;
 			$sal->save();
-			$proceso5 = "ALTA DE SALIDAS";
-			$mensaje5 = "REgistro guardado correctamente";
+			$proceso5 = "Excelente!!";
+			$mensaje5 = "Registro guardado correctamente";
 		    return view ('sistema.mensaje5')
 			->with('proceso5',$proceso5)
 			->with('mensaje5',$mensaje5);
@@ -941,8 +941,78 @@ class littlehouse extends Controller
 	}
 	//////////
 	
+	//Alta usuario//
+	public function altausuarios()
+    {
+		 
+	 $clavequesigue = usuarios::orderBy('id_usuario','desc')
+								->take(1)
+								->get();
+     $idus = $clavequesigue[0]->id_usuario+1;
+     return view ("sistema.altausuarios")
+			->with('idus',$idus);
+    }
+	////
 	
-    
+	//Guarda Usuario//
+	public function guardausuarios(Request $request)
+    {
+		$id_usuario = $request->id_usuario;
+        $nombre_usuario =  $request->nombre_usuario;
+        $nombre = $request->nombre;
+        $activo = $request->activo;
+		$reporte = $request->reporte;
+		$archivo = $request->archivo;
+
+        
+		 $this->validate($request,[
+	     'id_usuario'=>'required|numeric',
+         'nombre_usuario'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+		 'nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+		 'reporte'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+		 'archivo'=>'image|mimes:jpeg,png,gif,jpg'
+	     ]);
+		 ///Validacion Archivo///
+     $file = $request->file('archivo');
+	 if($file!="")
+	 {	 
+	 $ldate = date('Ymd_His_');
+	 $img = $file->getClientOriginalName();
+	 $img2 = $ldate.$img;
+	 \Storage::disk('local')->put($img2, \File::get($file));
+	 }
+	 else
+     {
+	 $img2= 'sin_foto.png';
+	 }
+	 ///////
+            $us = new usuarios;
+			$us->id_usuario = $request->id_usuario;
+			$us->nombre_usuario = $request->nombre_usuario;
+			$us->nombre =$request->nombre;
+			$us->activo= $request->activo;
+			$us->reporte= $request->reporte;
+			$us->archivo = $img2;
+			$us->save();
+			$proceso6 = "Excelente!!";
+			$mensaje6 = "Registro guardado correctamente";
+		    return view ('sistema.mensaje6')
+			->with('proceso6',$proceso6)
+			->with('mensaje6',$mensaje6);
+		  
+        
+    }
+	//////
+	
+    //Reporte de Usuario//
+	public function reporteus()
+	{
+	$usuarios=usuarios::withTrashed()->orderBy('id_usuario','asc')
+	          ->get();
+	  return view('sistema.reporteus')
+	  ->with('usuarios',$usuarios);                  
+	}
+	///////////
     
     
     
