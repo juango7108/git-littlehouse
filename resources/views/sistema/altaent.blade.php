@@ -38,7 +38,7 @@ Folio de la Factura</td><td><input type  ='text' name ='folio_factura' value="{{
 @if($errors->first('fecha_factura')) 
 <i> {{ $errors->first('fecha_factura') }} </i> 
 @endif	
-Fecha de la Factura</td><td><input type  ='text' name ='fecha_factura' value="{{old('fecha_factura')}}" placeholder="año-mes-dia*">
+Fecha de Factura</td><td><input type  ='text' name ='fecha_factura' value="{{old('fecha_factura')}}" placeholder="año-mes-dia*">
 </td></tr>
 
 <tr><td>

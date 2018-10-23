@@ -2,10 +2,10 @@
 @section('pie')
 @section('tabla')
 <h1>Reporte de Entradas</h1>
-<table border= 1>
+<table class="table table-condensed">
 <th colspan="7"><center>Reporte de Entradas</center></th>
 <tr>
-<td>ID_Entrada</td><td>Fecha de Entrada</td>
+<td>Clave</td><td>Fecha de Entrada</td>
 <td>Proveedor</td><td>Folio Factura</td>
 <td>Fecha de la Factura</td><td>Id del Usuario</td><td>Operaciones</td>
 </tr>
@@ -17,15 +17,23 @@
 <td>{{$ent->folio_factura}}</td>
 <td>{{$ent->fecha_factura}}</td>
 <td>{{$ent->id_usuario}}</td>
+@if($ent->deleted_at=="")
 	<td>
-	<a href="{{URL::action('littlehouse@eliminaent',['id_entrada'=>$ent->id_entrada])}}"> 
-	
-Eliminar   
-</a>
-   <a href="{{URL::action('littlehouse@modificaent',['id_entrada'=>$ent->id_entrada])}}"> 
-   Modificar</a>
-   </td>
-</td>
+	<a class="glyphicon glyphicon-off" href="{{URL::action('littlehouse@eliminaent',['id_entrada'=>$ent->id_entrada])}}"> 
+	Inhabilitar  
+    </a>
+    <a class="glyphicon glyphicon-edit" href="{{URL::action('littlehouse@modificaent',['id_entrada'=>$ent->id_entrada])}}"> 
+    Modificar</a>
+    </td>
+	 @else
+		 <td>
+	<a class="glyphicon glyphicon-wrench" href="{{URL::action('littlehouse@restauraent',['id_entrada'=>$ent->id_entrada])}}"> 
+	Restaurar  
+    </a>
+    <a class="glyphicon glyphicon-trash" href="{{URL::action('littlehouse@fisicaent',['id_entrada'=>$ent->id_entrada])}}"> 
+    Eliminar</a>
+	@endif
+    </td>
 </tr>
 @endforeach
 </table>
