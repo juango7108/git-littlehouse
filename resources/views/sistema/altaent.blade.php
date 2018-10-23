@@ -10,35 +10,35 @@
 <tr><td>@if($errors->first('id_entrada')) 
 <i> {{ $errors->first('id_entrada') }} </i> 
 @endif	
-Clave de Etrada</td><td><input type = 'text' name = 'id_entrada' value="{{($ident)}}" readonly='readonly'>
+Clave de Etrada</td><td><input type = 'text' class="form-control" name = 'id_entrada' value="{{($ident)}}" readonly='readonly'>
 </td></tr>
 
 <tr><td>
 @if($errors->first('fecha_entrada')) 
 <i> {{ $errors->first('fecha_entrada') }} </i> 
 @endif	
-Fecha de Entrada</td><td><input type = 'text' name  ='fecha_entrada' value="{{old('fecha_entrada')}}" placeholder="año-mes-dia*">
+Fecha de Entrada</td><td><input type = 'text' class="form-control" name  ='fecha_entrada' value="{{old('fecha_entrada')}}" placeholder="año-mes-dia*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('proveedor')) 
 <i> {{ $errors->first('proveedor') }} </i> 
 @endif	
-Nombre del Proveedor</td><td><input type = 'text' name  ='proveedor' value="{{old('proveedor')}}" placeholder="Campo Obligatorio*">
+Nombre del Proveedor</td><td><input type = 'text' class="form-control" name  ='proveedor' value="{{old('proveedor')}}" placeholder="Campo Obligatorio*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('folio_factura')) 
 <i> {{ $errors->first('folio_factura') }} </i> 
 @endif	
-Folio de la Factura</td><td><input type  ='text' name ='folio_factura' value="{{old('folio_factura')}}" placeholder="Campo Obligatorio*">
+Folio de la Factura</td><td><input type  ='text' class="form-control" name ='folio_factura' value="{{old('folio_factura')}}" placeholder="Campo Obligatorio*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('fecha_factura')) 
 <i> {{ $errors->first('fecha_factura') }} </i> 
 @endif	
-Fecha de Factura</td><td><input type  ='text' name ='fecha_factura' value="{{old('fecha_factura')}}" placeholder="año-mes-dia*">
+Fecha de Factura</td><td><input type  ='text' class="form-control" name ='fecha_factura' value="{{old('fecha_factura')}}" placeholder="año-mes-dia*">
 </td></tr>
 
 <tr><td>

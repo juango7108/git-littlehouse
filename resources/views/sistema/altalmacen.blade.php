@@ -13,40 +13,40 @@
 @if($errors->first('id_producto')) 
 <i> {{ $errors->first('id_producto') }} </i> 
 @endif	
-Clave de Producto</td><td><input type = 'text' name = 'id_producto' value="{{($idp)}}" readonly='readonly'>
+Clave de Producto</td><td><input type = 'text' class="form-control" name = 'id_producto' value="{{($idp)}}" readonly='readonly'>
 </td></tr>
 <tr><td>
 @if($errors->first('producto')) 
 <i> {{ $errors->first('producto') }} </i> 
 @endif	
-Producto</td><td><input type = 'text' name = 'producto' value="{{old('producto')}}" placeholder="Nombre de Producto*">
+Producto</td><td><input type = 'text' class="form-control" name = 'producto' value="{{old('producto')}}" placeholder="Nombre de Producto*">
 </td></tr>
 
 <tr><td>
 @if($errors->first('cantidad_minima')) 
 <i> {{ $errors->first('cantidad_minima') }} </i> 
 @endif	
-Cantidad Minima del Producto</td><td><input type = 'text' name  ='cantidad_minima' value="{{old('cantidad_minima')}}" placeholder="Representar en Unidad">
+Cantidad Minima del Producto</td><td><input type = 'text' class="form-control" name  ='cantidad_minima' value="{{old('cantidad_minima')}}" placeholder="Representar en Unidad">
 </td></tr>
 
 <tr><td>
 @if($errors->first('costo')) 
 <i> {{ $errors->first('costo') }} </i> 
 @endif	
-Costo del Producto</td><td><input type = 'text' name  ='costo' value="{{old('costo')}}" placeholder="Agregar Decimal">
+Costo del Producto</td><td><input type = 'text' class="form-control" name  ='costo' value="{{old('costo')}}" placeholder="Agregar Decimal">
 </td></tr>
 
 <tr><td>
 @if($errors->first('costo_promedio')) 
 <i> {{ $errors->first('costo_promedio') }} </i> 
 @endif	
-Costo Promedio del Producto</td><td><input type  ='text' name ='costo_promedio' value="{{old('costo_promedio')}}" placeholder="Cantidad*Costo">
+Costo Promedio del Producto</td><td><input type  ='text' class="form-control" name ='costo_promedio' value="{{old('costo_promedio')}}" placeholder="Cantidad*Costo">
 </td></tr>
 <tr><td>
 @if($errors->first('existencia_actual')) 
 <i> {{ $errors->first('existencia_actual') }} </i> 
 @endif	
-Existencia Actual del Producto</td><td><input type='text' name ='existencia_actual' value="{{old('existencia_actual')}}" placeholder="Representar en Unidad">
+Existencia Actual del Producto</td><td><input type='text' class="form-control" name ='existencia_actual' value="{{old('existencia_actual')}}" placeholder="Representar en Unidad">
 </td></tr>
 
 <tr><td><input class="btn btn-success" type = 'submit' class="form-control" value = 'Guardar'>

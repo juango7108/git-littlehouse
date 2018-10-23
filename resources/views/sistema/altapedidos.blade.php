@@ -12,28 +12,28 @@
 <tr><td>@if($errors->first('id_pedido')) 
 <i> {{ $errors->first('id_pedido') }} </i> 
 @endif	
-Clave</td><td><input type = 'text' name = 'id_pedido' value="{{($idpedido)}}" readonly='readonly' >
+Clave</td><td><input type = 'text' class="form-control" name = 'id_pedido' value="{{($idpedido)}}" readonly='readonly' >
 </td></tr>
 
 <tr><td>
 @if($errors->first('direccion')) 
 <i> {{ $errors->first('direccion') }} </i> 
 @endif	
-Dirección(s)</td><td><input type = 'text' name  ='direccion' value="{{old('direccion')}}" placeholder="Introduce la Dirección.">
+Dirección(s)</td><td><input type = 'text' class="form-control" name  ='direccion' value="{{old('direccion')}}" placeholder="Introduce la Dirección.">
 </td></tr>
 
 <tr><td>
 @if($errors->first('fecha_pedido')) 
 <i> {{ $errors->first('fecha_pedido') }} </i> 
 @endif	
-Fecha de Pedido(s)</td><td><input type = 'text' name  ='fecha_pedido' value="{{old('fecha_pedido')}}" placeholder="Introduce la Fecha.">
+Fecha de Pedido(s)</td><td><input type = 'text' class="form-control" name  ='fecha_pedido' value="{{old('fecha_pedido')}}" placeholder="Introduce la Fecha.">
 </td></tr>
 
 <tr><td>
 @if($errors->first('fecha_entrega')) 
 <i> {{ $errors->first('fecha_entrega') }} </i> 
 @endif	
-Fecha de Entrega</td><td><input type  ='text' name ='fecha_entrega' value="{{old('fecha_entrega')}}" placeholder="Introduce la Fecha.">
+Fecha de Entrega</td><td><input type  ='text' class="form-control" name ='fecha_entrega' value="{{old('fecha_entrega')}}" placeholder="Introduce la Fecha.">
 </td></tr>
 
 <tr><td>

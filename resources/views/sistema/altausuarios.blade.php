@@ -13,21 +13,21 @@
 @if($errors->first('id_usuario')) 
 <i> {{ $errors->first('id_usuario') }} </i> 
 @endif	
-Clave</td><td><input type = 'text' name = 'id_usuario' value="{{($idus)}}" readonly='readonly'>
+Clave</td><td><input type = 'text' class="form-control" name = 'id_usuario' value="{{($idus)}}" readonly='readonly'>
 </td></tr>
 
 <tr><td>
 @if($errors->first('nombre_usuario')) 
 <i> {{ $errors->first('nombre_usuario') }} </i> 
 @endif	
-nombre_usuario </td><td><input type = 'text' name  ='nombre_usuario' value="{{old('nombre_usuario')}}" placeholder="Usuario login">
+nombre_usuario </td><td><input type = 'text' class="form-control" name  ='nombre_usuario' value="{{old('nombre_usuario')}}" placeholder="Usuario login">
 </td></tr>
 
 <tr><td>
 @if($errors->first('nombre')) 
 <i> {{ $errors->first('nombre') }} </i> 
 @endif	
-nombre(s)</td><td><input type = 'text' name  ='nombre' value="{{old('nombre')}}" placeholder="Nombre y Apellidos">
+nombre(s)</td><td><input type = 'text' class="form-control" name  ='nombre' value="{{old('nombre')}}" placeholder="Nombre y Apellidos">
 </td></tr>
 <tr><td>
 Activo<input type = 'radio' name = 'activo' value = 'SI' checked>SI
@@ -37,7 +37,7 @@ Activo<input type = 'radio' name = 'activo' value = 'SI' checked>SI
 @if($errors->first('reporte')) 
 <i> {{ $errors->first('reporte') }} </i> 
 @endif	
-Reporte</td><td><input type  ='text' name ='reporte' value="{{old('reporte')}}" placeholder="Descripcion">
+Reporte</td><td><input type  ='text' class="form-control" name ='reporte' value="{{old('reporte')}}" placeholder="Descripcion">
 </td></tr>
 <tr><td>
 @if($errors->first('archivo')) 

@@ -10,21 +10,21 @@
 <tr><td>@if($errors->first('id_salida')) 
 <i> {{ $errors->first('id_salida') }} </i> 
 @endif	
-Clave de Salida</td><td><input type = 'text' name = 'id_salida' value="{{($idsal)}}" readonly='readonly'>
+Clave de Salida</td><td><input type = 'text' class="form-control" name = 'id_salida' value="{{($idsal)}}" readonly='readonly'>
 </td></tr>
 
 <tr><td>
 @if($errors->first('fecha_salida')) 
 <i> {{ $errors->first('fecha_salida') }} </i> 
 @endif	
-Fecha de Salida</td><td><input type = 'text' name  ='fecha_salida' value="{{old('fecha_salida')}}" placeholder="Año-Mes-Dias">
+Fecha de Salida</td><td><input type = 'text' class="form-control" name  ='fecha_salida' value="{{old('fecha_salida')}}" placeholder="Año-Mes-Dias">
 </td></tr>
 
 <tr><td>
 @if($errors->first('responsable')) 
 <i> {{ $errors->first('responsable') }} </i> 
 @endif	
-Responsable</td><td><input type = 'text' name  ='responsable' value="{{old('responsable')}}" placeholder="Persona a Cargo">
+Responsable</td><td><input type = 'text' class="form-control" name  ='responsable' value="{{old('responsable')}}" placeholder="Persona a Cargo">
 </td></tr>
 
 <tr><td>
