@@ -43,8 +43,8 @@ Descripción</td><td><input type  ='text' name ='descripcion' value="{{old('desc
 Seleccione foto</td><td><input type='file' name ='archivo'>
 </td></tr>
 
-<tr><td><input type = 'submit' class="form-control" value = 'Guardar'></td>
-<td><input type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
+<tr><td><input class="btn btn-success" type = 'submit' class="form-control" value = 'Guardar'></td>
+<td><input class="btn btn-danger" type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
 </form>
 </table>
 <br>

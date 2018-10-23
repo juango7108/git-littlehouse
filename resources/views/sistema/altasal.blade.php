@@ -34,8 +34,8 @@ Seleccione ID del Usuario a Cargo</td><td><select name = 'id_usuario'>
 			@endforeach
                   </select></td></tr>
 <hr style="color: #0056b2;" />
-<tr><td><input type = 'submit' class="form-control" value = 'Guardar'></td>
-<td><input type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
+<tr><td><input class="btn btn-success" type = 'submit' class="form-control" value = 'Guardar'>
+<input class="btn btn-danger"  type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
 </form>
 </table>
 <br>

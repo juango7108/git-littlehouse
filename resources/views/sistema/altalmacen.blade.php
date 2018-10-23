@@ -49,8 +49,8 @@ Costo Promedio del Producto</td><td><input type  ='text' name ='costo_promedio' 
 Existencia Actual del Producto</td><td><input type='text' name ='existencia_actual' value="{{old('existencia_actual')}}" placeholder="Representar en Unidad">
 </td></tr>
 
-<tr><td><input type = 'submit' class="form-control" value = 'Guardar'></td>
-<td><input type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
+<tr><td><input class="btn btn-success" type = 'submit' class="form-control" value = 'Guardar'>
+<input class="btn btn-danger"  type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
 </form>
 </table>
 <br>

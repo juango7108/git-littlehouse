@@ -60,8 +60,8 @@ Correo</td><td><input type = 'correo'name = 'correo' value="{{old('correo')}}" p
 Activo<input type = 'radio' name = 'activo' value = 'SI' checked>SI
 <input type = 'radio' name = 'activo' value = 'NO'>NO
 </td></tr>
-<tr><td><input type = 'submit' class="form-control" value = 'Guardar'></td>
-<td><input type = 'reset' class="form-control" value = 'Cancelar'></td></tr>
+<tr><td><input class="btn btn-success" type = 'submit' class="form-control" value = 'Guardar'></td>
+<td><input class="btn btn-danger" type = 'reset' value = 'Cancelar'></td></tr>
 </form>
 </table>
 @stop

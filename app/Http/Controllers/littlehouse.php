@@ -33,6 +33,10 @@ class littlehouse extends Controller
     {
         return view("sistema.tablas");
     }
+	public function plantmensaje()
+    {
+        return view("sistema.plantmensaje");
+    }
    //alta cliente//
     public function altacliente()
     {
@@ -83,11 +87,12 @@ class littlehouse extends Controller
 			$client->activo=$request->activo;
 			//$client->idc=$request->idc;
 			$client->save();
-			$proceso = "Alta Cliente";
+			$proceso = "Excelente!!";
 			$mensaje = "Registro guardado correctamente";
 		    return view ('sistema.mensaje')
 			->with('proceso',$proceso)
 			->with('mensaje',$mensaje);
+			
 		  
         
     }
