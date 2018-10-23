@@ -1,7 +1,7 @@
 @extends('sistema.tablas')
 @section('pie')
 @section('tabla')
-<h1>Reporte de uss</h1>
+<h1>Reporte de usuario</h1>
 <table class="table table-condensed">
 <th colspan="7"><center>Reporte de Usuarios</center></th>
 <tr>

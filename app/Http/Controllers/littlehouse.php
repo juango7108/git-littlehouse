@@ -45,6 +45,7 @@ class littlehouse extends Controller
 	 $clavequesigue = clientes::withTrashed()->orderBy('id_cliente','desc')
 								->take(1)
 								->get();
+								//Id Desde 0//
 								if(count($clavequesigue)==0)
 								{
 									$idcs =1;
@@ -53,6 +54,7 @@ class littlehouse extends Controller
 								{
 									$idcs = $clavequesigue[0]->id_cliente+1;
 								}
+								//////
      return view ("sistema.altacliente")
 	 ->with('idcs',$idcs);
 	}
@@ -201,9 +203,10 @@ class littlehouse extends Controller
 	//Alta Pedido//
 	 public function altapedidos()
     {
-     	 	 $clavequesigue = pedidos::orderBy('id_pedido','desc')
+     	 	 $clavequesigue = pedidos::withTrashed()->orderBy('id_pedido','desc')
 								->take(1)
 								->get();
+								
      $idpedido = $clavequesigue[0]->id_pedido+1;
 	 
 	 $clientes = clientes::where('activo','=','SI')
@@ -364,7 +367,7 @@ class littlehouse extends Controller
 	//alta casa//
     public function altacasa()
     {
-	 $clavequesigue = descripcion_casas::orderBy('id_casa','desc')
+	 $clavequesigue = descripcion_casas::withTrashed()->orderBy('id_casa','desc')
 								->take(1)
 								->get();
      $idcasa = $clavequesigue[0]->id_casa+1;
@@ -532,7 +535,7 @@ class littlehouse extends Controller
     {
      	 
 	 
-	 $clavequesigue = alm_productos::orderBy('id_producto','desc')
+	 $clavequesigue = alm_productos::withTrashed()->orderBy('id_producto','desc')
 								->take(1)
 								->get();
      $idp = $clavequesigue[0]->id_producto+1;
@@ -675,7 +678,7 @@ class littlehouse extends Controller
 	public function altaent()
     {
 		 
-	 $clavequesigue = entradas::orderBy('id_entrada','desc')
+	 $clavequesigue = entradas::withTrashed()->orderBy('id_entrada','desc')
 								->take(1)
 								->get();
      $ident = $clavequesigue[0]->id_entrada+1;
@@ -823,7 +826,7 @@ class littlehouse extends Controller
 	public function altasal()
     {
 		 
-	 $clavequesigue = salidas::orderBy('id_salida','desc')
+	 $clavequesigue = salidas::withTrashed()->orderBy('id_salida','desc')
 								->take(1)
 								->get();
      $idsal = $clavequesigue[0]->id_salida+1;
@@ -952,7 +955,7 @@ class littlehouse extends Controller
 	public function altausuarios()
     {
 		 
-	 $clavequesigue = usuarios::orderBy('id_usuario','desc')
+	 $clavequesigue = usuarios::withTrashed()->orderBy('id_usuario','desc')
 								->take(1)
 								->get();
      $idus = $clavequesigue[0]->id_usuario+1;
