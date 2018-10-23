@@ -4,7 +4,7 @@
 @section('alta')
 <table>
 <form action =  "{{route('guardapedido')}}" method = "POST" >
-<th>Regsitrar Pedido</th>
+<th>Regsitrar Pedidos</th>
 
 {{csrf_field()}}
 
