@@ -95,8 +95,9 @@ Route::get('/fisicasal/{id_salida}','littlehouse@fisicasal')->name('fisicasal');
 //////////////
 
 //Login
-Route::get('/login','littlehouse2@login');
+Route::get('/login','littlehouse2@login')->name('login');
 Route::POST('/iniciasesion','littlehouse2@iniciasesion')->name('iniciasesion');
+Route::get('/home','littlehouse2@home')->name('home');
 /////////////
 
 
