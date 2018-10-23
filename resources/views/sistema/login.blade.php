@@ -1,23 +1,21 @@
+<html>
+<body>
+<h1>Inicio de Sesión</h1>
 
-
-
-
-@extends('sistema.principal')
-
-@section('contenido')
-<form action="{{route('valida')}}"  method = 'POST'>
-{{csrf_field()}}
-Teclea usuario<input type = 'text' name = 'user' value="{{old('user')}}">
 <br>
-Teclea password<input type = 'text' name = 'pasword' value="{{old('pasword')}}">
+<form action="{{route('iniciasesion')}}" method="POST">
+	{{csrf_field()}}
+Teclea el usuario<input type='text' name='usuario'>
 <br>
-<input type='submit' value = 'Inicia Sesion'>
+Teclea PSW<input type='text' name='password'>
+<br>
+<input type='submit' value='Iniciar Sesion'>
 </form>
 @if (Session::has('error'))
-    <div>{{ Session::get('error') }}</div>
+	<div>{{Session::get('error')}}</div>
 <script>
-    alert("{{Session::get('error')}}");
+alert("{{Session::get('error')}}");
 </script>
 @endif
-
-@stop
+</body>
+</html>

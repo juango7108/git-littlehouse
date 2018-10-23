@@ -42,10 +42,17 @@ class littlehouse extends Controller
     {
      	 
 	 
-	 $clavequesigue = clientes::orderBy('id_cliente','desc')
+	 $clavequesigue = clientes::withTrashed()->orderBy('id_cliente','desc')
 								->take(1)
 								->get();
-     $idcs = $clavequesigue[0]->id_cliente+1;
+								if(count($clavequesigue)==0)
+								{
+									$idcs =1;
+								}
+								else
+								{
+									$idcs = $clavequesigue[0]->id_cliente+1;
+								}
      return view ("sistema.altacliente")
 	 ->with('idcs',$idcs);
 	}
