@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LITTLEHOUSE</title>
+    <title>Bootstrap Admin Theme v3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 	           <div class="col-md-12">
 	              <!-- Logo -->
 	              <div class="logo">
-	                 <h1><a href="index.html">LITTLEHOUSE</a></h1>
+	                 <h1><a href="index.html">Bootstrap Admin Theme</a></h1>
 	              </div>
 	           </div>
 	        </div>
@@ -36,7 +36,7 @@
 				<div class="login-wrapper">
 			        <div class="box">
 			            <div class="content-wrap">
-			                <h6>Iniciar Sesión</h6>
+			                <h6>Sign In</h6>
 			                <div class="social">
 	                            <div class="division">
 	                
@@ -60,8 +60,8 @@ alert("{{Session::get('error')}}");
 			        </div>
 
 			        <div class="already">
-			            <p>Inicia Sesión para Realizar tus consultas</p>
-			            <a href="signup.html">Ayuda</a>
+			            <p>Don't have an account yet?</p>
+			            <a href="signup.html">Sign Up</a>
 			        </div>
 			    </div>
 			</div>

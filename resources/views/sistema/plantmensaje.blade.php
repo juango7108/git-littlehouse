@@ -106,7 +106,27 @@
 			</div>
 		</div>
 	</div>
+    <br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
+    <footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2018 <a href='#'>|LITTLEHOUSE.COM</a>
+            </div>
+            
+         </div>
+      </footer>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

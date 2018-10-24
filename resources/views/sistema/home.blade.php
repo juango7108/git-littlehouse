@@ -57,8 +57,10 @@
         <div class="col-lg-8">
 
           <!-- Title -->
-          <h1 class="mt-4">Post Title</h1>
-
+		  @foreach($logins as $log)
+          <h1 class="mt-4">{{$log->usuario}}</h1>
+		  <h1 class="mt-4">{{$log->tipo}}</h1>
+@endforeach
           <!-- Author -->
           <p class="lead">
             by
