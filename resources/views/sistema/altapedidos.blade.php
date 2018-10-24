@@ -39,7 +39,7 @@ Fecha de Entrega</td><td><input type  ='text' class="form-control" name ='fecha_
 <tr><td>
 Seleccione ID del Cliente</td><td><select name = 'id_cliente'>
             @foreach($clientes as $cr)
-			<option value = '{{$cr->id_cliente}}'>{{$cr->id_cliente}}</option>
+			<option value = '{{$cr->id_cliente}}'>{{$cr->nombre}}</option>
 			@endforeach
                   </select></td></tr>
 				  <tr><td>
