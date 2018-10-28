@@ -192,8 +192,8 @@ class littlehouse extends Controller
 	public function fisicacl($id_cliente)
 	{
 		clientes::withTrashed()->where('id_cliente',$id_cliente)->forceDelete();
-		$proceso = "Restauracion del Cliente";
-		$mensaje = "Registro restaurado correctamente";
+		$proceso = "Eliminacion del Cliente";
+		$mensaje = "Registro eliminado correctamente";
 		return view('sistema.mensaje')
 		->with('proceso',$proceso)
 		->with('mensaje',$mensaje);

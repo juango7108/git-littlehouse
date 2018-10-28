@@ -39,9 +39,6 @@ Route::get('/restauraped/{id_pedido}','littlehouse@restauraped')->name('restaura
 Route::get('/fisicaped/{id_pedido}','littlehouse@fisicaped')->name('fisicaped');
 ///////
 
-
-
-
 /*
 Route::get('/altapedidos','littlehouse3@altapedidos');
 Route::POST('/guardapedido','littlehouse3@guardapedido')->name('guardapedido');
@@ -64,6 +61,17 @@ Route::get('/restauralm/{id_producto}','littlehouse@restauralm')->name('restaura
 Route::get('/fisicalm/{id_producto}','littlehouse@fisicalm')->name('fisicalm');
 //////////////
 
+/*altaa-almacen-de-productos
+Route::get('/altalmacen','littlehouse4@altalmacen');
+Route::POST('/guardalmacen','littlehouse4@guardalmacen')->name('guardalmacen');
+Route::get('/reportealmacen','littlehouse4@reportealmacen');
+Route::get('/modificalm/{id_producto}','littlehouse4@modificalm')->name('modificalm');
+Route::POST('/guardamodificalm','littlehouse4@guardamodificalm')->name('guardamodificalm');
+Route::get('/eliminalm/{id_producto}','littlehouse4@eliminalm')->name('eliminalm');
+Route::get('/restauralm/{id_producto}','littlehouse4@restauralm')->name('restauralm');
+Route::get('/fisicalm/{id_producto}','littlehouse4@fisicalm')->name('fisicalm');
+*/
+
 //casas
 Route::get('/altacasa','littlehouse@altacasa');
 Route::POST('/guardacasa','littlehouse@guardacasa')->name('guardacasa');
@@ -74,6 +82,17 @@ Route::get('/eliminacas/{id_casa}','littlehouse@eliminacas')->name('eliminacas')
 Route::get('/restauracas/{id_casa}','littlehouse@restauracas')->name('restauracas');
 Route::get('/fisicas/{id_casa}','littlehouse@fisicas')->name('fisicas');
 //////////////
+
+/*casas
+Route::get('/altacasa','littlehouse5@altacasa');
+Route::POST('/guardacasa','littlehouse5@guardacasa')->name('guardacasa');
+Route::get('/reportecasa','littlehouse5@reportecasa');
+Route::get('/modificas/{id_casa}','littlehouse5@modificas')->name('modificas');
+Route::POST('/guardamodificas','littlehouse5@guardamodificas')->name('guardamodificas');
+Route::get('/eliminacas/{id_casa}','littlehouse5@eliminacas')->name('eliminacas');
+Route::get('/restauracas/{id_casa}','littlehouse5@restauracas')->name('restauracas');
+Route::get('/fisicas/{id_casa}','littlehouse5@fisicas')->name('fisicas');
+*/
 
 //altausuarios
 Route::get('/altausuarios','littlehouse@altausuarios');
@@ -86,6 +105,17 @@ Route::get('/restauraus/{id_usuario}','littlehouse@restauraus')->name('restaurau
 Route::get('/fisicaus/{id_usuario}','littlehouse@fisicaus')->name('fisicaus');
 //////////////
 
+/*altausuarios
+Route::get('/altausuarios','littlehouse6@altausuarios');
+Route::POST('/guardausuarios','littlehouse6@guardausuarios')->name('guardausuarios');
+Route::get('/reporteus','littlehouse6@reporteus');
+Route::get('/modificaus/{id_usuario}','littlehouse6@modificaus')->name('modificaus');
+Route::POST('/guardamodificaus','littlehouse6@guardamodificaus')->name('guardamodificaus');
+Route::get('/eliminaus/{id_usuario}','littlehouse6@eliminaus')->name('eliminaus');
+Route::get('/restauraus/{id_usuario}','littlehouse6@restauraus')->name('restauraus');
+Route::get('/fisicaus/{id_usuario}','littlehouse6@fisicaus')->name('fisicaus');
+*/
+
 //Entradas
 Route::get('/altaent','littlehouse@altaent');
 Route::POST('/guardaent','littlehouse@guardaent')->name('guardaent');
@@ -97,6 +127,17 @@ Route::get('/restauraent/{id_entrada}','littlehouse@restauraent')->name('restaur
 Route::get('/fisicaent/{id_entrada}','littlehouse@fisicaent')->name('fisicaent');
 //////////////
 
+/*Entradas
+Route::get('/altaent','littlehouse7@altaent');
+Route::POST('/guardaent','littlehouse7@guardaent')->name('guardaent');
+Route::get('/reportent','littlehouse7@reportent');
+Route::get('/modificaent/{id_entrada}','littlehouse7@modificaent')->name('modificaent');
+Route::POST('/guardamodificaent','littlehouse7@guardamodificaent')->name('guardamodificaent');
+Route::get('/eliminaent/{id_entrada}','littlehouse7@eliminaent')->name('eliminaent');
+Route::get('/restauraent/{id_entrada}','littlehouse7@restauraent')->name('restauraent');
+Route::get('/fisicaent/{id_entrada}','littlehouse7@fisicaent')->name('fisicaent');
+*/
+
 //Salidas
 Route::get('/altasal','littlehouse@altasal');
 Route::POST('/guardasal','littlehouse@guardasal')->name('guardasal');
@@ -107,6 +148,17 @@ Route::get('/eliminasal/{id_salida}','littlehouse@eliminasal')->name('eliminasal
 Route::get('/restaurasal/{id_salida}','littlehouse@restaurasal')->name('restaurasal');
 Route::get('/fisicasal/{id_salida}','littlehouse@fisicasal')->name('fisicasal');
 //////////////
+
+/*Salidas
+Route::get('/altasal','littlehouse8@altasal');
+Route::POST('/guardasal','littlehouse8@guardasal')->name('guardasal');
+Route::get('/reportesal','littlehouse8@reportesal');
+Route::get('/modificasal/{id_salida}','littlehouse8@modificasal')->name('modificasal');
+Route::POST('/guardamodificasal','littlehouse8@guardamodificasal')->name('guardamodificasal');
+Route::get('/eliminasal/{id_salida}','littlehouse8@eliminasal')->name('eliminasal');
+Route::get('/restaurasal/{id_salida}','littlehouse8@restaurasal')->name('restaurasal');
+Route::get('/fisicasal/{id_salida}','littlehouse8@fisicasal')->name('fisicasal');
+*/
 
 //Login
 Route::get('/login','littlehouse2@login')->name('login');
