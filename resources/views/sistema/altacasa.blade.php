@@ -40,7 +40,7 @@ Descripción</td><td><input type  ='text' class="form-control" name ='descripcio
 @if($errors->first('archivo')) 
 <i> {{ $errors->first('archivo') }} </i> 
 @endif	
-Seleccione foto</td><td><input type='file' name ='archivo'>
+Seleccione foto</td><td><input type='file'  name ='archivo'>
 </td></tr>
 
 <tr><td><input class="btn btn-success" type = 'submit' class="form-control" value = 'Guardar'></td>

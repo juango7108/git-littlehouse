@@ -37,7 +37,21 @@ Route::POST('/guardamodificaped','littlehouse@guardamodificaped')->name('guardam
 Route::get('/eliminaped/{id_pedido}','littlehouse@eliminaped')->name('eliminaped');
 Route::get('/restauraped/{id_pedido}','littlehouse@restauraped')->name('restauraped');
 Route::get('/fisicaped/{id_pedido}','littlehouse@fisicaped')->name('fisicaped');
-//////////////
+///////
+
+
+
+
+/*
+Route::get('/altapedidos','littlehouse3@altapedidos');
+Route::POST('/guardapedido','littlehouse3@guardapedido')->name('guardapedido');
+Route::get('/reportepedido','littlehouse3@reportepedido');
+Route::get('/modificaped/{id_pedido}','littlehouse3@modificaped')->name('modificaped');
+Route::POST('/guardamodificaped','littlehouse3@guardamodificaped')->name('guardamodificaped');
+Route::get('/eliminaped/{id_pedido}','littlehouse3@eliminaped')->name('eliminaped');
+Route::get('/restauraped/{id_pedido}','littlehouse3@restauraped')->name('restauraped');
+Route::get('/fisicaped/{id_pedido}','littlehouse3@fisicaped')->name('fisicaped');
+*/
 
 //altaa-almacen-de-productos
 Route::get('/altalmacen','littlehouse@altalmacen');

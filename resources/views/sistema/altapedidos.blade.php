@@ -19,27 +19,27 @@ Clave</td><td><input type = 'text' class="form-control" name = 'id_pedido' value
 @if($errors->first('direccion')) 
 <i> {{ $errors->first('direccion') }} </i> 
 @endif	
-Dirección(s)</td><td><input type = 'text' class="form-control" name  ='direccion' value="{{old('direccion')}}" placeholder="Introduce la Dirección.">
+Dirección(s)</td><td><input type = 'text' class="form-control" name  ='direccion' value="{{old('direccion')}}" placeholder="Dirección con #num">
 </td></tr>
 
 <tr><td>
 @if($errors->first('fecha_pedido')) 
 <i> {{ $errors->first('fecha_pedido') }} </i> 
 @endif	
-Fecha de Pedido(s)</td><td><input type = 'text' class="form-control" name  ='fecha_pedido' value="{{old('fecha_pedido')}}" placeholder="Introduce la Fecha.">
+Fecha de Pedido(s)</td><td><input type = 'text' class="form-control" name  ='fecha_pedido' value="{{old('fecha_pedido')}}" placeholder="Año-Mes-Dia">
 </td></tr>
 
 <tr><td>
 @if($errors->first('fecha_entrega')) 
 <i> {{ $errors->first('fecha_entrega') }} </i> 
 @endif	
-Fecha de Entrega</td><td><input type  ='text' class="form-control" name ='fecha_entrega' value="{{old('fecha_entrega')}}" placeholder="Introduce la Fecha.">
+Fecha de Entrega</td><td><input type  ='text' class="form-control" name ='fecha_entrega' value="{{old('fecha_entrega')}}" placeholder="Año-Mes-Dia">
 </td></tr>
 
 <tr><td>
 Seleccione ID del Cliente</td><td><select name = 'id_cliente'>
             @foreach($clientes as $cr)
-			<option value = '{{$cr->id_cliente}}'>{{$cr->nombre}}</option>
+			<option  value = '{{$cr->id_cliente}}'>{{$cr->nombre}}</option>
 			@endforeach
                   </select></td></tr>
 				  <tr><td>

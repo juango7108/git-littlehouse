@@ -244,11 +244,11 @@ class littlehouse extends Controller
 		    $pedid->id_cliente = $request->id_cliente;
 			$pedid->id_usuario = $request->id_usuario;
 			$pedid->save();
-			$proceso2 = "Excelente!!";
-			$mensaje2 = "Registro guardado correctamente";
-		    return view ('sistema.mensaje2')
-			->with('proceso2',$proceso2)
-			->with('mensaje2',$mensaje2);
+			$proceso = "Excelente!!";
+			$mensaje = "Registro guardado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 		  
         
     }
@@ -315,11 +315,11 @@ class littlehouse extends Controller
 		    $pedid->id_cliente = $request->id_cliente;
 			$pedid->id_usuario = $request->id_usuario;
 			$pedid->save();
-			$proceso2 = "Modifica registro de los pedidos";
-			$mensaje2 = "Registro modificado correctamente";
-		    return view ('sistema.mensaje2')
-			->with('proceso2',$proceso2)
-			->with('mensaje2',$mensaje2);
+			$proceso = "Modifica registro de los pedidos";
+			$mensaje = "Registro modificado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 		 
 		
  echo "Listo para modificar";
@@ -330,22 +330,22 @@ class littlehouse extends Controller
 	public function eliminaped($id_pedido)
 	{
 		  pedidos::find($id_pedido)->delete();
-		    $proceso2 = "INHABILITAR Pedidos";
-			$mensaje2 = "El pedido ha sido inhabilitado Correctamente";
-			return view ('sistema.mensaje2')
-			->with('proceso2',$proceso2)
-			->with('mensaje2',$mensaje2);
+		    $proceso = "INHABILITAR Pedidos";
+			$mensaje = "El pedido ha sido inhabilitado Correctamente";
+			return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 	}
 	///////
 	//Restaurar Pedido//
 	public function restauraped($id_pedido)
 	{
 		pedidos::withTrashed()->where('id_pedido',$id_pedido)->restore();
-		$proceso2 = "Restauracion del Pedido";
-		$mensaje2 = "Registro restaurado correctamente";
-		return view('sistema.mensaje2')
-		->with('proceso2',$proceso2)
-		->with('mensaje2',$mensaje2);
+		$proceso = "Restauracion del Pedido";
+		$mensaje = "Registro restaurado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	/////////
@@ -354,11 +354,11 @@ class littlehouse extends Controller
 	public function fisicaped($id_pedido)
 	{
 		pedidos::withTrashed()->where('id_pedido',$id_pedido)->forceDelete();
-		$proceso2 = "Restauracion del Pedido";
-		$mensaje2 = "Registro restaurado correctamente";
-		return view('sistema.mensaje2')
-		->with('proceso2',$proceso2)
-		->with('mensaje2',$mensaje2);
+		$proceso = "Restauracion del Pedido";
+		$mensaje = "Registro restaurado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	//////////
@@ -413,11 +413,11 @@ class littlehouse extends Controller
 			$cas->descripcion= $request->descripcion;
 			$cas->archivo = $img2;
 			$cas->save();
-			$proceso1 = "Excelente!!";
-			$mensaje1 = "Registro guardado correctamente";
-		    return view ('sistema.mensaje1')
-			->with('proceso1',$proceso1)
-			->with('mensaje1',$mensaje1);
+			$proceso = "Excelente!!";
+			$mensaje = "Registro guardado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 		  
         
     }
@@ -475,11 +475,11 @@ class littlehouse extends Controller
 			$cas->archivo = $img2;
 	        }
 			$cas->save();
-			$proceso1 = "Modifica Registro de Casa";
-			$mensaje1 = "REgistro ha sido modificado correctamente";
-		    return view ('sistema.mensaje1')
-			->with('proceso1',$proceso1)
-			->with('mensaje1',$mensaje1);
+			$proceso = "Modifica Registro de Casa";
+			$mensaje = "REgistro ha sido modificado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 	 
 	 
 	 
@@ -495,11 +495,11 @@ class littlehouse extends Controller
 	public function eliminacas($id_casa)
 	{
 		  descripcion_casas::find($id_casa)->delete();
-		    $proceso1 = "Elimina el Registro de Casas";
-			$mensaje1 = "El registro ha sido borrado Correctamente";
-			return view ('sistema.mensaje1')
-			->with('proceso1',$proceso1)
-			->with('mensaje1',$mensaje1);
+		    $proceso = "Elimina el Registro de Casas";
+			$mensaje = "El registro ha sido borrado Correctamente";
+			return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 	}
 	///////////
 	
@@ -507,11 +507,11 @@ class littlehouse extends Controller
 	public function restauracas($id_casa)
 	{
 		descripcion_casas::withTrashed()->where('id_casa',$id_casa)->restore();
-		$proceso1 = "Restauracion del Registro de Casa";
-		$mensaje1 = "Registro restaurado correctamente";
-		return view('sistema.mensaje1')
-		->with('proceso1',$proceso1)
-		->with('mensaje1',$mensaje1);
+		$proceso = "Restauracion del Registro de Casa";
+		$mensaje = "Registro restaurado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	/////////
@@ -520,11 +520,11 @@ class littlehouse extends Controller
 	public function fisicas($id_casa)
 	{
 		descripcion_casas::withTrashed()->where('id_casa',$id_casa)->forceDelete();
-		$proceso1 = "Restauracion del Registro de Casa";
-		$mensaje1 = "Registro restaurado correctamente";
-		return view('sistema.mensaje1')
-		->with('proceso1',$proceso1)
-		->with('mensaje1',$mensaje1);
+		$proceso = "Restauracion del Registro de Casa";
+		$mensaje = "Registro restaurado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	//////////
@@ -571,11 +571,11 @@ class littlehouse extends Controller
 			$alm->costo_promedio=$request->costo_promedio;
 			$alm->existencia_actual=$request->existencia_actual;
 			$alm->save();
-			$proceso3 = "Excelente!!";
-			$mensaje3 = "Registro guardado correctamente";
-		    return view ('sistema.mensaje3')
-			->with('proceso3',$proceso3)
-			->with('mensaje3',$mensaje3);
+			$proceso = "Excelente!!";
+			$mensaje = "Registro guardado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 		  
         
     }
@@ -626,11 +626,11 @@ class littlehouse extends Controller
 			$alm->costo_promedio=$request->costo_promedio;
 			$alm->existencia_actual=$request->existencia_actual;
 			$alm->save();
-			$proceso3 = "Modificacion de Producto de Almacen";
-			$mensaje3 = "Registro modificado correctamente";
-		    return view ('sistema.mensaje3')
-			->with('proceso3',$proceso3)
-			->with('mensaje3',$mensaje3);
+			$proceso = "Modificacion de Producto de Almacen";
+			$mensaje = "Registro modificado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 		
 	
 	}
@@ -640,11 +640,11 @@ class littlehouse extends Controller
 	public function eliminalm($id_producto)
 	{
 		  alm_productos::find($id_producto)->delete();
-		    $proceso3 = "Inhabilitar Prodtcuto";
-			$mensaje3 = "El registro ha sido inhabilitado Correctamente";
-			return view ('sistema.mensaje3')
-			->with('proceso3',$proceso3)
-			->with('mensaje3',$mensaje3);
+		    $proceso = "Inhabilitar Prodtcuto";
+			$mensaje = "El registro ha sido inhabilitado Correctamente";
+			return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 	}
 	/////
 	
@@ -652,11 +652,11 @@ class littlehouse extends Controller
 	public function restauralm($id_producto)
 	{
 		alm_productos::withTrashed()->where('id_producto',$id_producto)->restore();
-		$proceso3 = "Restauracion del Producto de Almacen";
-		$mensaje3 = "Registro restaurado correctamente";
-		return view('sistema.mensaje3')
-		->with('proceso3',$proceso3)
-		->with('mensaje3',$mensaje3);
+		$proceso = "Restauracion del Producto de Almacen";
+		$mensaje = "Registro restaurado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	/////////
@@ -665,11 +665,11 @@ class littlehouse extends Controller
 	public function fisicalm($id_producto)
 	{
 		alm_productos::withTrashed()->where('id_producto',$id_producto)->forceDelete();
-		$proceso3 = "Restauracion del Prodtcuto de Almacen";
-		$mensaje3 = "Registro restaurado correctamente";
-		return view('sistema.mensaje3')
-		->with('proceso3',$proceso3)
-		->with('mensaje3',$mensaje3);
+		$proceso = "Eliminacion del registro de Prodtcuto de Almacen";
+		$mensaje = "Registro eliminado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	//////////
@@ -716,11 +716,11 @@ class littlehouse extends Controller
 			$ent->fecha_factura = $request->fecha_factura;
 			$ent->id_usuario = $request->id_usuario;
 			$ent->save();
-			$proceso4 = "Excelente!!";
-			$mensaje4 = "Registro guardado correctamente";
-		    return view ('sistema.mensaje4')
-			->with('proceso4',$proceso4)
-			->with('mensaje4',$mensaje4);
+			$proceso = "Excelente!!";
+			$mensaje = "Registro guardado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
         
     }
 	/////
@@ -776,11 +776,11 @@ class littlehouse extends Controller
 			$ent->fecha_factura = $request->fecha_factura;
 			$ent->id_usuario = $request->id_usuario;
 			$ent->save();
-			$proceso4 = "Modificacion de la Entrada";
-			$mensaje4 = "REgistro modificado correctamente";
-		    return view ('sistema.mensaje4')
-			->with('proceso4',$proceso4)
-			->with('mensaje4',$mensaje4);
+			$proceso = "Modificacion de la Entrada";
+			$mensaje = "REgistro modificado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 		
 	}
 	////
@@ -789,22 +789,22 @@ class littlehouse extends Controller
 	public function eliminaent($id_entrada)
 	{
 		  entradas::find($id_entrada)->delete();
-		    $proceso4 = "INHABILITAR ENTRADA";
-			$mensaje4 = "EL REGISTRO DE ENTRADA ha sido inhabilitado Correctamente";
-			return view ('sistema.mensaje4')
-			->with('proceso4',$proceso4)
-			->with('mensaje4',$mensaje4);
+		    $proceso = "INHABILITAR ENTRADA";
+			$mensaje = "EL REGISTRO DE ENTRADA ha sido inhabilitado Correctamente";
+			return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 	}
 	/////
 	//Restaurar Entrada//
 	public function restauraent($id_entrada)
 	{
 		entradas::withTrashed()->where('id_entrada',$id_entrada)->restore();
-		$proceso4 = "Restauracion de Entrada";
-		$mensaje4 = "Registro restaurado correctamente";
-		return view('sistema.mensaje4')
-		->with('proceso4',$proceso4)
-		->with('mensaje4',$mensaje4);
+		$proceso = "Restauracion de Entrada";
+		$mensaje = "Registro restaurado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	/////////
@@ -813,11 +813,11 @@ class littlehouse extends Controller
 	public function fisicaent($id_entrada)
 	{
 		entradas::withTrashed()->where('id_entrada',$id_entrada)->forceDelete();
-		$proceso4 = "Restauracion de Entrada";
-		$mensaje4 = "Registro eliminado correctamente";
-		return view('sistema.mensaje4')
-		->with('proceso4',$proceso4)
-		->with('mensaje4',$mensaje4);
+		$proceso = "Eliminacion de Entrada";
+		$mensaje = "Registro eliminado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	//////////
@@ -857,11 +857,11 @@ class littlehouse extends Controller
 			$sal->responsable = $request->responsable;
 			$sal->id_usuario = $request->id_usuario;
 			$sal->save();
-			$proceso5 = "Excelente!!";
-			$mensaje5 = "Registro guardado correctamente";
-		    return view ('sistema.mensaje5')
-			->with('proceso5',$proceso5)
-			->with('mensaje5',$mensaje5);
+			$proceso = "Excelente!!";
+			$mensaje = "Registro guardado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
         }
 	//////
 	//Reporte Salidas//
@@ -906,22 +906,22 @@ class littlehouse extends Controller
 			$sal->responsable = $request->responsable;
 			$sal->id_usuario = $request->id_usuario;
 			$sal->save();
-			$proceso5 = "Modificacion de la SALIDA";
-			$mensaje5 = "REgistro modificado correctamente";
-		    return view ('sistema.mensaje5')
-			->with('proceso5',$proceso5)
-			->with('mensaje5',$mensaje5);
+			$proceso = "Modificacion de la SALIDA";
+			$mensaje = "REgistro modificado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 		}
 	///////
 	//Inhabilitar Salidas//
 	public function eliminasal($id_salida)
 	{
 		  salidas::find($id_salida)->delete();
-		    $proceso5 = "Inhabilitar SALIDA";
-			$mensaje5 = "EL REGISTRO DE SALIDA ha sido inhabilitado Correctamente";
-			return view ('sistema.mensaje5')
-			->with('proceso5',$proceso5)
-			->with('mensaje5',$mensaje5);
+		    $proceso = "Inhabilitar SALIDA";
+			$mensaje = "EL REGISTRO DE SALIDA ha sido inhabilitado Correctamente";
+			return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 	}
 	//////
 	
@@ -929,11 +929,11 @@ class littlehouse extends Controller
 	public function restaurasal($id_salida)
 	{
 		salidas::withTrashed()->where('id_salida',$id_salida)->restore();
-		$proceso5 = "Restauracion de Salida";
-		$mensaje5 = "Registro restaurado correctamente";
-		return view('sistema.mensaje5')
-		->with('proceso5',$proceso5)
-		->with('mensaje5',$mensaje5);
+		$proceso = "Restauracion de Salida";
+		$mensaje = "Registro restaurado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	/////////
@@ -942,11 +942,11 @@ class littlehouse extends Controller
 	public function fisicasal($id_salida)
 	{
 		salidas::withTrashed()->where('id_salida',$id_salida)->forceDelete();
-		$proceso5 = "Restauracion de Salida";
-		$mensaje5 = "Registro eliminado correctamente";
-		return view('sistema.mensaje5')
-		->with('proceso5',$proceso5)
-		->with('mensaje5',$mensaje5);
+		$proceso = "Eliminación de Salida";
+		$mensaje = "Registro eliminado correctamente";
+		return view('sistema.mensaje')
+		->with('proceso',$proceso)
+		->with('mensaje',$mensaje);
 		
 	}
 	//////////
@@ -1004,11 +1004,11 @@ class littlehouse extends Controller
 			$us->reporte= $request->reporte;
 			$us->archivo = $img2;
 			$us->save();
-			$proceso6 = "Excelente!!";
-			$mensaje6 = "Registro guardado correctamente";
-		    return view ('sistema.mensaje6')
-			->with('proceso6',$proceso6)
-			->with('mensaje6',$mensaje6);
+			$proceso = "Excelente!!";
+			$mensaje = "Registro guardado correctamente";
+		    return view ('sistema.mensaje')
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);
 		  
         
     }
