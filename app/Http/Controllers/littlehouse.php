@@ -387,7 +387,7 @@ class littlehouse extends Controller
         
 		 $this->validate($request,[
 	     'id_casa'=>'required|numeric',
-         'dimenciones'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+         'dimenciones'=>['regex:/^[0-9]+[x]{1}[0-9]+$/'],
 		 'color'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
 		 'descripcion'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
 		 'archivo'=>'image|mimes:jpeg,png,gif,jpg'
@@ -450,7 +450,7 @@ class littlehouse extends Controller
         $descripcion = $request->descripcion;
         
 		 $this->validate($request,[
-         'dimenciones'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+         'dimenciones'=>['regex:/^[0-9]+[x]{1}[0-9]+$/'],
 		 'color'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
 		 'descripcion'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
 		 'archivo'=>'image|mimes:jpeg,png,gif,jpg'

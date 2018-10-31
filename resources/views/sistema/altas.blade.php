@@ -4,19 +4,19 @@
     <title>LittleHouse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jQuery UI -->
-    <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
-
+                                                                                                                                                                      <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- styles -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+	
+    <!-- styles with asset -->
+    <link href="{{asset('css/styles.css')}}" rel="stylesheet">
 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
-    <link href="vendors/select/bootstrap-select.min.css" rel="stylesheet">
-    <link href="vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
+    <link href="{{asset('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')}}" rel="stylesheet">
+    <link href="{{asset('vendors/form-helpers/css/bootstrap-formhelpers.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendors/select/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendors/tags/css/bootstrap-tags.css')}}" rel="stylesheet">
 
-    <link href="css/forms.css" rel="stylesheet">
+    <link href="{{asset('css/forms.css')}}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -185,33 +185,33 @@
       </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+                                                                                                                                                                   <script src="https://code.jquery.com/jquery.js"></script>
     <!-- jQuery UI -->
-    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+                                                                                                                                                                   <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 
-    <script src="vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
+    <script src="{{asset('vendors/form-helpers/js/bootstrap-formhelpers.min.js')}}"></script>
 
-    <script src="vendors/select/bootstrap-select.min.js"></script>
+    <script src="{{asset('vendors/select/bootstrap-select.min.js')}}"></script>
 
-    <script src="vendors/tags/js/bootstrap-tags.min.js"></script>
+    <script src="{{asset('vendors/tags/js/bootstrap-tags.min.js')}}"></script>
 
-    <script src="vendors/mask/jquery.maskedinput.min.js"></script>
+    <script src="{{asset('vendors/mask/jquery.maskedinput.min.js')}}"></script>
 
-    <script src="vendors/moment/moment.min.js"></script>
+    <script src="{{asset('vendors/moment/moment.min.js')}}"></script>
 
-    <script src="vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="{{asset('vendors/wizard/jquery.bootstrap.wizard.min.js')}}"></script>
 
      <!-- bootstrap-datetimepicker -->
-     <link href="vendors/bootstrap-datetimepicker/datetimepicker.css" rel="stylesheet">
-     <script src="vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script> 
+     <link href="{{asset('vendors/bootstrap-datetimepicker/datetimepicker.css')}}" rel="stylesheet">
+     <script src="{{asset('vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js')}}"></script> 
 
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <link href="{{asset('//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css')}}" rel="stylesheet"/>
+	<script src="{{asset('//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js')}}"></script>
 
-    <script src="js/custom.js"></script>
-    <script src="js/forms.js"></script>
+    <script src="{{asset('js/custom.js')}}"></script>
+    <script src="{{asset('js/forms.js')}}"></script>
   </body>
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap Admin Theme v3</title>
+    <title>LITTLEHOUSE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- styles -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="{{asset('css/styles.css')}}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -130,9 +130,9 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+                                                                                                                                                                     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/custom.js')}}"></script>
   </body>
 </html>
