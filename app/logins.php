@@ -10,6 +10,6 @@ class logins extends Model
 	use SoftDeletes;
     protected $primaryKey = 'id_login';  
    protected $fillable=['id_login','nombre_usuario','correo','password','nombre',
-                       'tipo'];
+                       'tipo','archivo'];
 					   protected $date=['deleted_at'];
 }

@@ -66,7 +66,7 @@ class littlehouse4 extends Controller
     ->get();
 
      return view('sistema.reportempleado')	
-	   
+	   ->with('empleados',$empleados);
    }
    ////
    

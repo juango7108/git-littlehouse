@@ -206,9 +206,17 @@ class littlehouse extends Controller
      	 	 $clavequesigue = pedidos::withTrashed()->orderBy('id_pedido','desc')
 								->take(1)
 								->get();
+								//Id desde 0//
+								if(count($clavequesigue)==0)
+								{
+									$idpedido =1;
+								}
+								else
+								{
 								
      $idpedido = $clavequesigue[0]->id_pedido+1;
-	 
+								}
+	 //
 	 $clientes = clientes::where('activo','=','SI')
 	                      ->orderBy('nombre','asc')
 						  ->get();
@@ -354,8 +362,8 @@ class littlehouse extends Controller
 	public function fisicaped($id_pedido)
 	{
 		pedidos::withTrashed()->where('id_pedido',$id_pedido)->forceDelete();
-		$proceso = "Restauracion del Pedido";
-		$mensaje = "Registro restaurado correctamente";
+		$proceso = "Eliminacion del Pedido";
+		$mensaje = "Registro eliminado correctamente";
 		return view('sistema.mensaje')
 		->with('proceso',$proceso)
 		->with('mensaje',$mensaje);
@@ -370,7 +378,14 @@ class littlehouse extends Controller
 	 $clavequesigue = descripcion_casas::withTrashed()->orderBy('id_casa','desc')
 								->take(1)
 								->get();
+								if(count($clavequesigue)==0)
+								{
+									$idcasa =1;
+								}
+								else
+								{
      $idcasa = $clavequesigue[0]->id_casa+1;
+								}
      return view ("sistema.altacasa")
 	 ->with('idcasa',$idcasa);
 	}
@@ -495,8 +510,8 @@ class littlehouse extends Controller
 	public function eliminacas($id_casa)
 	{
 		  descripcion_casas::find($id_casa)->delete();
-		    $proceso = "Elimina el Registro de Casas";
-			$mensaje = "El registro ha sido borrado Correctamente";
+		    $proceso = "Inhabilita el Registro de Casas";
+			$mensaje = "El registro ha sido inhabilitado Correctamente";
 			return view ('sistema.mensaje')
 			->with('proceso',$proceso)
 			->with('mensaje',$mensaje);
@@ -538,7 +553,14 @@ class littlehouse extends Controller
 	 $clavequesigue = alm_productos::withTrashed()->orderBy('id_producto','desc')
 								->take(1)
 								->get();
+								if(count($clavequesigue)==0)
+								{
+									$idp =1;
+								}
+								else
+								{
      $idp = $clavequesigue[0]->id_producto+1;
+								}
      return view ("sistema.altalmacen")
 	 ->with('idp',$idp);
 	}
@@ -640,7 +662,7 @@ class littlehouse extends Controller
 	public function eliminalm($id_producto)
 	{
 		  alm_productos::find($id_producto)->delete();
-		    $proceso = "Inhabilitar Prodtcuto";
+		    $proceso = "Inhabilitar Producto";
 			$mensaje = "El registro ha sido inhabilitado Correctamente";
 			return view ('sistema.mensaje')
 			->with('proceso',$proceso)
@@ -681,7 +703,14 @@ class littlehouse extends Controller
 	 $clavequesigue = entradas::withTrashed()->orderBy('id_entrada','desc')
 								->take(1)
 								->get();
+								if(count($clavequesigue)==0)
+								{
+									$ident =1;
+								}
+								else
+								{
      $ident = $clavequesigue[0]->id_entrada+1;
+								}
 	 
 	 $usuarios = usuarios::where('activo','=','SI')
 	                      ->orderBy('nombre','asc')
@@ -829,8 +858,14 @@ class littlehouse extends Controller
 	 $clavequesigue = salidas::withTrashed()->orderBy('id_salida','desc')
 								->take(1)
 								->get();
+								if(count($clavequesigue)==0)
+								{
+									$idsal =1;
+								}
+								else
+								{
      $idsal = $clavequesigue[0]->id_salida+1;
-	 
+								}
 	 $usuarios = usuarios::where('activo','=','SI')
 	                      ->orderBy('nombre','asc')
 						  ->get();
@@ -958,7 +993,14 @@ class littlehouse extends Controller
 	 $clavequesigue = usuarios::withTrashed()->orderBy('id_usuario','desc')
 								->take(1)
 								->get();
+								if(count($clavequesigue)==0)
+								{
+									$idus =1;
+								}
+								else
+								{
      $idus = $clavequesigue[0]->id_usuario+1;
+								}
      return view ("sistema.altausuarios")
 			->with('idus',$idus);
     }

@@ -160,11 +160,11 @@ Route::get('/restaurasal/{id_salida}','littlehouse8@restaurasal')->name('restaur
 Route::get('/fisicasal/{id_salida}','littlehouse8@fisicasal')->name('fisicasal');
 */
 
-//Login
+/*
 Route::get('/login','littlehouse2@login')->name('login');
 Route::POST('/iniciasesion','littlehouse2@iniciasesion')->name('iniciasesion');
 Route::get('/home','littlehouse2@home')->name('home');
-/////////////
+*/
 
 
 

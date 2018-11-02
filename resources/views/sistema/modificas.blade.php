@@ -1,54 +1,61 @@
-<html>
-<body>
-<h1>Modifica Casa</h1>
-<br>
+@extends('sistema.altas')
+@section('pie')
+@section('alta')
+<table>
 <form action =  "{{route('guardamodificas')}}" method = "POST" enctype='multipart/form-data' >                        
 {{csrf_field()}}
 
+<th>Modifica registro de la Casa</th>
+
+<tr><td>
 @if($errors->first('id_casa')) 
 <i> {{ $errors->first('id_casa') }} </i> 
-@endif	<br>
-        
-Clave<input type = 'text' name = 'id_casa' value="{{$casas->id_casa}}" readonly ='readonly'>
-<br>
+@endif	
+Clave</td><td><input type = 'text' class="form-control" name = 'id_casa' value="{{$casas->id_casa}}" readonly ='readonly'>
+</td></tr>
+
+<tr><td>
 @if($errors->first('dimenciones')) 
 <i> {{ $errors->first('dimenciones') }} </i> 
-@endif	<br>
+@endif	
+Dimenciones</td><td><input type = 'text' class="form-control" name  ='dimenciones' value="{{$casas->dimenciones}}">
+</td></tr>
 
-Dimenciones<input type = 'text' name  ='dimenciones' value="{{$casas->dimenciones}}">
-<br>
-
+<tr><td>
 @if($errors->first('color')) 
 <i> {{ $errors->first('color') }} </i> 
-@endif	<br>
-Color<input type  ='text' name ='color' value="{{$casas->color}}">
-<br>
+@endif	
+Color</td><td><input type  ='text' class="form-control" name ='color' value="{{$casas->color}}">
+</td></tr>
 
-
-
+<tr><td>
 @if($errors->first('descripcion')) 
 <i> {{ $errors->first('descripcion') }} </i> 
-@endif	<br>
-
-Codigo Postal <input type = 'text'name = 'descripcion' value="{{$casas->descripcion}}" >
-              </select>
-<br>
-
+@endif	
+Codigo Postal</td><td><input type = 'text' class="form-control" name = 'descripcion' value="{{$casas->descripcion}}" >
+</td></tr>
+		
+<tr><td>
 @if($errors->first('archivo')) 
 <i> {{ $errors->first('archivo') }} </i> 
 @endif
-<br>
 <img src = "{{asset('archivos/'.$casas->archivo)}}"
         height =100 width=100>
-<br>
+</td>
+<td>
 Seleccione foto<input type='file' name ='archivo'>
-<BR>
-<input type = 'submit' value = 'Guardar'>
+</td></tr>
+
+<tr><td>
+<input class="btn btn-success" type = 'submit' class="form-control" value = 'Guardar'></td>
+<td><input class="btn btn-danger" type = 'reset' value = 'Cancelar'></td></tr>
+
 </form>
-</body>
-</html>
-
-
+</table>
+@stop
+@stop
+@section('pie')
+@stop
 
 
 

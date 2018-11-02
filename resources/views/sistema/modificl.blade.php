@@ -1,69 +1,78 @@
-<html>
-<body>
-<h1>Modifica Cliente</h1>
-<br>
-<form action =  "{{route('guardamodificli')}}" method = "POST">          <!--enctype='multipart/form-data'-->             
+@extends('sistema.altas')
+@section('pie')
+@section('alta')
+<table>
+<form action =  "{{route('guardamodificli')}}" method = "POST">                       
 {{csrf_field()}}
+<th>Modifica Cliente</th>
 
+<tr><td>
 @if($errors->first('id_cliente')) 
 <i> {{ $errors->first('id_cliente') }} </i> 
-@endif	<br>
-        
-Clave de Cliente<input type = 'text' name = 'id_cliente' value="{{$cl->id_cliente}}" readonly ='readonly'>
-<br>
+@endif	
+Clave de Cliente</td><td><input type = 'text' class="form-control" name = 'id_cliente' value="{{$cl->id_cliente}}" readonly ='readonly'>
+</td></tr>
+
+<tr><td>
 @if($errors->first('nombre')) 
 <i> {{ $errors->first('nombre') }} </i> 
-@endif	<br>
+@endif	
+Nombre(s)</td><td><input type = 'text' class="form-control" name  ='nombre' value="{{$cl->nombre}}">
+</td></tr>
 
-Nombre(s)<input type = 'text' name  ='nombre' value="{{$cl->nombre}}">
-<br>
-
+<tr><td>
 @if($errors->first('apellidos')) 
 <i> {{ $errors->first('apellidos') }} </i> 
-@endif	<br>
-Apellidos<input type  ='text' name ='apellidos' value="{{$cl->apellidos}}">
-<br>
+@endif	
+Apellidos</td><td><input type  ='text' class="form-control" name ='apellidos' value="{{$cl->apellidos}}">
+</td></tr>
 
-
-
+<tr><td>
 @if($errors->first('direccion')) 
 <i> {{ $errors->first('direccion') }} </i> 
-@endif	<br>
-Dirección <input type = 'text' name = 'direccion' value="{{$cl->direccion}}" >
-<br>
+@endif
+Dirección</td><td><input type = 'text' class="form-control" name = 'direccion' value="{{$cl->direccion}}" >
+</td></tr>
 
+<tr><td>
 @if($errors->first('cp')) 
 <i> {{ $errors->first('cp') }} </i> 
-@endif <br>
-Codigo Postal <input type = 'text' name = 'cp' value="{{$cl->cp}}" >
-<br>
+@endif 
+Codigo Postal</td><td><input type = 'text' class="form-control" name = 'cp' value="{{$cl->cp}}" >
+</td></tr>
+
+<tr><td>
 @if($errors->first('tel')) 
 <i> {{ $errors->first('tel') }} </i> 
-@endif <br>
-Telefono <input type = 'text' name = 'tel' value="{{$cl->tel}}" >
-<br>
+@endif 
+Telefono</td><td><input type = 'text' class="form-control" name = 'tel' value="{{$cl->tel}}" >
+</td></tr>
+
+<tr><td>
 @if($errors->first('correo')) 
 <i> {{ $errors->first('correo') }} </i> 
-@endif <br>
-Correo<input type = 'text' name = 'correo' value="{{$cl->correo}}" >
+@endif 
+Correo</td><td><input type = 'text' class="form-control" name = 'correo' value="{{$cl->correo}}" >
+</td></tr>
 
-
-<br>
+<tr><td>
 @if($cl->activo=='SI') 
 Activo<input type = 'radio' name = 'activo' value = 'SI' checked>SI
 <input type = 'radio' name = 'activo' value = 'NO'>NO
-<br>
 @else
 Activo<input type = 'radio' name = 'activo' value = 'SI' >SI
 <input type = 'radio' name = 'activo' value = 'NO'checked>NO
 @endif
-<br>
-
-<input type = 'submit' value = 'Guardar'>
+</td></tr>
+<tr><td>
+<input class="btn btn-success" type = 'submit' class="form-control" value = 'Guardar'></td>
+<td><input class="btn btn-danger" type = 'reset' value = 'Cancelar'></td></tr>
 </form>
-</body>
-</html>
-
+</table>
+@stop
+@stop
+@section('pie')
+@stop
 
 
 

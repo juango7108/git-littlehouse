@@ -143,7 +143,7 @@
          <div class="container">
          
             <div class="copy text-center">
-               Copyright 2014 <a href='#'>LittleHouse</a>
+               Copyright 2018 <a href='#'>LittleHouse</a>
             </div>
             
          </div>

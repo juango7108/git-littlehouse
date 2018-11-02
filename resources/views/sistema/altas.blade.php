@@ -143,15 +143,19 @@
 	  				<div class="col-md-6">
 	  					<div class="content-box-large">
 			  				<div class="panel-heading">
-					            <div class="panel-title">Instrucciones</div><br><br>
+					            <div class="panel-title">Instrucciones de Altas</div><br><br>
 								<hr style="color: #0056b2;" />
 								<table>
 					          <tr><td>1. Debes de llenar todos los campos sin excepción alguna </td></tr>
 							  <tr><td>2. El ID no se pede modificar, para esto deberás axcesar a la Base de Datos </td></tr>
 							  <tr><td>3. Llenar los campos conforme lo indica la caja de texto </td></tr>
 							  <tr><td>4. Una vez registrado el nuevo campo, podras verlo en las tablas </td></tr>
-							  <tr><td><p style="color:#FF0000";>Contactar al Tecnico a cargo en caso de error en el Sistema</p></td></tr>
-							  <tr><td><p style="color:#00FF00";>al221511513@gmail.com</p></td></tr>
+							   <tr><td><hr style="color: #0056b2;" /></td></tr>
+							   <tr><td><div class="panel-title">Instrucciones de Bajas, Modificaciones y Eliminaciones</div></td></tr>
+							  <tr><td><p style="color:#FF0000";>***No puedes eliminar el registro del cliente***</p></td></tr>
+							   <tr><td><p style="color:#0000FF";>***Primero tendras que dar de baja el pedido***</p></td></tr>
+							   <tr><td><p style="color:#0000FF";>***NOTA: NO se puede eliminar o actualizar una fila externa***</p></td></tr>
+							  <tr><td><p style="color:#00FF00";>email del administrador: al221511513@gmail.com</p></td></tr>
 							  </table>
 					            <div class="panel-options">
 					              <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
