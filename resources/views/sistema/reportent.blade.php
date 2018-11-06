@@ -7,7 +7,7 @@
 <tr>
 <td>Clave</td><td>Fecha de Entrada</td>
 <td>Proveedor</td><td>Folio Factura</td>
-<td>Fecha de la Factura</td><td>Id del Usuario</td><td>Operaciones</td>
+<td>Fecha de la Factura</td><td>Nombre de Usuario</td><td>Operaciones</td>
 </tr>
 @foreach($entradas as $ent)
 <tr>
@@ -16,7 +16,7 @@
 <td>{{$ent->proveedor}}</td>
 <td>{{$ent->folio_factura}}</td>
 <td>{{$ent->fecha_factura}}</td>
-<td>{{$ent->id_usuario}}</td>
+<td>{{$ent->usuar}}</td>
 @if($ent->deleted_at=="")
 	<td>
 	<a class="glyphicon glyphicon-off" href="{{URL::action('littlehouse@eliminaent',['id_entrada'=>$ent->id_entrada])}}"> 

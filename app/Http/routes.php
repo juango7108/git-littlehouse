@@ -12,7 +12,7 @@
 */
 
 //index
-Route::get('/index','littlehouse@home');
+Route::get('/index','littlehouse@index');
 Route::get('/altas','littlehouse@altas');
 Route::get('/tablas','littlehouse@tablas');
 Route::get('/plantmensaje','littlehouse@plantmensaje');
@@ -160,11 +160,12 @@ Route::get('/restaurasal/{id_salida}','littlehouse8@restaurasal')->name('restaur
 Route::get('/fisicasal/{id_salida}','littlehouse8@fisicasal')->name('fisicasal');
 */
 
-/*
+
 Route::get('/login','littlehouse2@login')->name('login');
 Route::POST('/iniciasesion','littlehouse2@iniciasesion')->name('iniciasesion');
-Route::get('/home','littlehouse2@home')->name('home');
-*/
+Route::get('/index','littlehouse2@index')->name('index');
+Route::get('/cerrarsesion','littlehouse2@cerrarsesion')->name('cerrarsesion');
+
 
 
 

@@ -101,13 +101,12 @@
                     <li><a href="calendar.html"><i class="glyphicon glyphicon-calendar"></i> Calendario</a></li>
                     <li class="submenu">
                          <a href="#">
-                            <i class="glyphicon glyphicon-list"></i> Cuenta
+                            <i class="glyphicon glyphicon-list"></i> <b>Bienvenido: {{Session::get('sesionname')}}</b>
                             <span class="caret pull-right"></span>
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="signup.html">Signup</a></li>
+                            <li><a href="{{URL::action('littlehouse2@cerrarsesion')}}">Signup</a></li>
                         </ul>
                     </li>
                 </ul>

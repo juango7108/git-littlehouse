@@ -11,7 +11,7 @@ use Session;
 class littlehouse2 extends Controller
 {
 	//Alta Login//
-	public altalogin()
+	/*public altalogin()
 	{
 		 $clavequesigue= logins::WithTrased()->orderBy('id_login','desc')
 		 ->take(1)
@@ -123,7 +123,7 @@ class littlehouse2 extends Controller
 								
 								
 								
-								
+		*/						
 	public function login()
 	{
 		return view('sistema.login');
@@ -159,15 +159,15 @@ class littlehouse2 extends Controller
 			$slog = Session::get('sesionlog');
 			$stipo = Session::get('sesiontipo');
 			//echo $sname . ' '. $slog . ' '. $stipo;
-			return redirect()->route('home');
+			return redirect()->route('index');
 		}
 		}
 		//return $consulta;
 }
-    public function home()
+    public function index()
     {
 		if(Session::get('sesionlog')!="")
-        return view("sistema.home");
+        return view("sistema.index");
 	else
 	{
 		Session::flash('error', 'Favor de loguearse antes de continuar');
@@ -175,6 +175,15 @@ class littlehouse2 extends Controller
 		
     }
 }
+public function cerrarsesion()
+{
+	Session::forget('sesionname');
+	Session::forget('sesionlog');
+	Session::forget('sesiontipo');
+	Session::flush();
+	Session::flash('error', 'Session cerrada correctamente');
+	return redirect()->route('login');
+	}
 
 
 

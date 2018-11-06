@@ -7,7 +7,7 @@
 <tr>
 <td>Clave</td><td>Dirección</td>
 <td>Fecha de Pedido</td><td>Fecha de Entrega</td>
-<td>Id del Cliente</td><td>Id del Usuario</td><td>Operaciones</td>
+<td>Nombre del Cliente</td><td>Nombre del Usuario</td><td>Operaciones</td>
 </tr>
 @foreach($pedidos as $pedid)
 <tr>
@@ -15,8 +15,8 @@
 <td>{{$pedid->direccion}}</td>
 <td>{{$pedid->fecha_pedido}}</td>
 <td>{{$pedid->fecha_entrega}}</td>
-<td>{{$pedid->id_cliente}}</td>
-<td>{{$pedid->id_usuario}}</td>
+<td>{{$pedid->clien}}</td>
+<td>{{$pedid->usuar}}</td>
 @if($pedid->deleted_at=="")
 	<td>
 	<a class="glyphicon glyphicon-off" href="{{URL::action('littlehouse@eliminaped',['id_pedido'=>$pedid->id_pedido])}}"> 

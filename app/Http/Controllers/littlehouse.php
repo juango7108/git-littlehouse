@@ -11,6 +11,7 @@ use App\usuarios;
 use App\alm_productos;
 use App\entradas;
 use App\salidas;
+use Session;
 //use App\pedido_detalles;
 //use App\entradas_detalles;
 //use App\salidas_detalles;
@@ -21,7 +22,7 @@ use App\salidas;
 class littlehouse extends Controller
 {
     
-	 public function home()
+	 public function index()
     {
         return view("sistema.index");
     }
@@ -117,7 +118,7 @@ class littlehouse extends Controller
 	//Modifica Cliente
 	public function modificl($id_cliente)
 	{
-		$cl = clientes::where('id_cliente','=',$id_cliente)
+		$cl = clientes::withTrashed()->where('id_cliente','=',$id_cliente)
 		                     ->get();
 		return view ('sistema.modificl')
 		->with('cl',$cl[0]);
@@ -217,10 +218,10 @@ class littlehouse extends Controller
      $idpedido = $clavequesigue[0]->id_pedido+1;
 								}
 	 //
-	 $clientes = clientes::where('activo','=','SI')
+	 $clientes = clientes::withTrashed()->where('activo','=','SI')
 	                      ->orderBy('nombre','asc')
 						  ->get();
-	$usuarios = usuarios::where('activo','=','SI')
+	$usuarios = usuarios::withTrashed()->where('activo','=','SI')
 	                      ->orderBy('nombre_usuario','asc')
 						  ->get();
      return view ("sistema.altapedidos")
@@ -266,10 +267,14 @@ class littlehouse extends Controller
 	///Reporte de pedido//
 	 public function reportepedido()
 	{
-	$pedidos=pedidos::withTrashed()->orderBy('id_pedido','asc')
-	          ->get();
+		$resultado=\DB::select(" SELECT m.id_pedido,m.direccion,m.fecha_pedido,
+	    m.fecha_entrega,c.nombre AS clien,u.nombre AS usuar,m.deleted_at
+        FROM pedidos AS m
+        INNER JOIN clientes AS c ON c.id_cliente =  m.id_cliente INNER JOIN usuarios AS u ON u.id_usuario =  m.id_usuario");
+	/*$pedidos=pedidos::withTrashed()->orderBy('id_pedido','asc')
+	          ->get();*/
 	  return view('sistema.reportepedido')
-	  ->with('pedidos',$pedidos);                  
+	  ->with('pedidos',$resultado);                  
 	}
 	////////
 	
@@ -449,7 +454,7 @@ class littlehouse extends Controller
 	//Modificar Casa//
 	public function modificas($id_casa)
 	{
-		$casas = descripcion_casas::where('id_casa','=',$id_casa)
+		$casas = descripcion_casas::withTrashed()->where('id_casa','=',$id_casa)
 		                     ->get();
 		return view ('sistema.modificas')
 		->with('casas',$casas[0]);
@@ -616,7 +621,7 @@ class littlehouse extends Controller
 	//Modfica Producto de Almacen//
 	public function modificalm($id_producto)
 	{
-		$alm = alm_productos::where('id_producto','=',$id_producto)
+		$alm = alm_productos::withTrashed()->where('id_producto','=',$id_producto)
 		                     ->get();
 		return view ('sistema.modificalm')
 		->with('alm',$alm[0]);
@@ -757,10 +762,14 @@ class littlehouse extends Controller
 	//Reporte de Entradas//
 	    public function reportent()
 	{
-	$entradas=entradas::withTrashed()->orderBy('id_entrada','asc')
-	          ->get();
+		$resultado=\DB::select("SELECT m.id_entrada,m.fecha_entrada,m.proveedor,
+	    m.folio_factura,m.fecha_factura,c.nombre AS usuar,m.deleted_at
+        FROM entradas AS m
+        INNER JOIN usuarios AS c ON c.id_usuario =  m.id_usuario");
+	/*$entradas=entradas::withTrashed()->orderBy('id_entrada','asc')
+	          ->get();*/
 	  return view('sistema.reportent')
-	  ->with('entradas',$entradas);                  
+	  ->with('entradas',$resultado);                  
 	}
 	////
 	
@@ -768,12 +777,12 @@ class littlehouse extends Controller
 	//Modifica entrada//
 	public function modificaent($id_entrada)
 	{
-		$entradas = entradas::where('id_entrada','=',$id_entrada)
+		$entradas = entradas::withTrashed()->where('id_entrada','=',$id_entrada)
 		                     ->get();
 		$id_usuario = $entradas[0]->id_usuario;
-		$usuarios = usuarios::where('id_usuario','=',$id_usuario)->get();
+		$usuarios = usuarios::withTrashed()->where('id_usuario','=',$id_usuario)->get();
 		
-		$otrosusus = usuarios::where('id_usuario','!=',$id_usuario)
+		$otrosusus = usuarios::withTrashed()->where('id_usuario','!=',$id_usuario)
 		                 ->get();
 		return view ('sistema.modificaent')
 		->with('entradas',$entradas[0])
@@ -911,12 +920,12 @@ class littlehouse extends Controller
 	//Modifica Salidas//
 	public function modificasal($id_salida)
 	{
-		$salidas = salidas::where('id_salida','=',$id_salida)
+		$salidas = salidas::withTrashed()->where('id_salida','=',$id_salida)
 		                     ->get();
 		$id_usuario = $salidas[0]->id_usuario;
-		$usuarios = usuarios::where('id_usuario','=',$id_usuario)->get();
+		$usuarios = usuarios::withTrashed()->where('id_usuario','=',$id_usuario)->get();
 		
-		$otrosusus = usuarios::where('id_usuario','!=',$id_usuario)
+		$otrosusus = usuarios::withTrashed()->where('id_usuario','!=',$id_usuario)
 		                 ->get();
 		return view ('sistema.modificasal')
 		->with('salidas',$salidas[0])

@@ -16,7 +16,6 @@
     <![endif]-->
   </head>
   <body class="login-bg">
-  @yield('contenido')
   	<div class="header">
 	     <div class="container">
 	        <div class="row">
@@ -36,32 +35,40 @@
 				<div class="login-wrapper">
 			        <div class="box">
 			            <div class="content-wrap">
-			                <h6>Iniciar Sesión</h6>
+			                <h6>Inicia Sesion</h6>
 			                <div class="social">
-	                            <div class="division">
-	                
-	                            </div>
+	                            <!--<a class="face_login" href="#">
+	                                <span class="face_icon">
+	                                    <img src="images/facebook.png" alt="fb">
+	                                </span>
+	                                <span class="text">Sign in with Facebook</span>
+	                            </a>-->
+	                            <!--<div class="division">
+	                                <hr class="left">
+	                                <span>or</span>
+	                                <hr class="right">
+	                            </div>-->
 	                        </div>
 							<form action="{{route('iniciasesion')}}" method="POST">
-	                        {{csrf_field()}}
-			                <input class="form-control" type="text" name='usuario' placeholder="nombre de usuario">
-			                <input class="form-control" type="text" name='password' placeholder="Password">
+                            {{csrf_field()}}
+			                <input class="form-control" type="text" name='usuario' placeholder="Usuario">
+			                <input class="form-control" type="password" name='password' placeholder="Password">
 			                <div class="action">
 			                    <input type="submit" class="btn btn-primary signup" value="Iniciar">
-							</form>
-							@if (Session::has('error'))
-	<div>{{Session::get('error')}}</div>
-<script>
-alert("{{Session::get('error')}}");
-</script>
-@endif
+								 </form>
+								 @if (Session::has('error'))
+                         <div>{{Session::get('error')}}</div>
+                         <script>
+                         alert("{{Session::get('error')}}");
+                         </script>
+                         @endif
 			                </div>                
 			            </div>
 			        </div>
-
+                 </form>
 			        <div class="already">
-			            <p>Inicia Sesión para Realizar tus consultas</p>
-			            <a href="signup.html">Ayuda</a>
+			            <p>Don't have an account yet?</p>
+			            <a href="signup.html">Sign Up</a>
 			        </div>
 			    </div>
 			</div>

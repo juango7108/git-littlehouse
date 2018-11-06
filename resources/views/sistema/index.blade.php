@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap Admin Theme v3</title>
+    <title>LITTLEHOUSE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,9 +60,9 @@
     	<div class="row">
 		  <div class="col-md-2">
 		  	<div class="sidebar content-box" style="display: block;">
-                <ul class="nav">
+             <ul class="nav">
                     <!-- Main menu -->
-                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> IntraNet</a></li>
+                    <li class="current"><a href="{{URL::action('littlehouse@index')}}"><i class="glyphicon glyphicon-home"></i> IntraNet</a></li>
 					<li class="submenu">
                          <a href="#">
                             <i class="glyphicon glyphicon-list"></i> Altas
@@ -71,10 +71,12 @@
                          <!-- Sub menu -->
                          <ul>
                             <li><a href="{{URL::action('littlehouse@altacliente')}}">Clientes</a></li>
-                            <li><a href="signup.html">Pedidos</a></li>
-							<li><a href="login.html">Usuarios</a></li>
-                            <li><a href="signup.html">Nueva Casa</a></li>
-							<li><a href="login.html">Producto de Almacen</a></li>
+                            <li><a href="{{URL::action('littlehouse@altapedidos')}}">Pedidos</a></li>
+							<li><a href="{{URL::action('littlehouse@altalmacen')}}">PAlmacen</a></li>
+                            <li><a href="{{URL::action('littlehouse@altacasa')}}">Nueva Casa</a></li>
+							<li><a href="{{URL::action('littlehouse@altaent')}}">Entradas </a></li>
+							<li><a href="{{URL::action('littlehouse@altasal')}}">Salidas </a></li>
+							<li><a href="{{URL::action('littlehouse@altausuarios')}}">Usuarios </a></li>
                         </ul>
                     </li>
 					<li class="submenu">
@@ -84,23 +86,25 @@
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a href="login.html">Clientes</a></li>
-                            <li><a href="signup.html">Pedidos</a></li>
-							<li><a href="login.html">Usuarios</a></li>
-                            <li><a href="signup.html">Nueva Casa</a></li>
-							<li><a href="login.html">Producto de Almacen</a></li>
+                            <li><a href="{{URL::action('littlehouse@reportecliente')}}">Clientes</a></li>
+                            <li><a href="{{URL::action('littlehouse@reportepedido')}}">Pedidos</a></li>
+                            <li><a href="{{URL::action('littlehouse@reportecasa')}}">Nueva Casa</a></li>
+							<li><a href="{{URL::action('littlehouse@reportealmacen')}}">PAlmacen</a></li>
+							<li><a href="{{URL::action('littlehouse@reportent')}}">Entradas</a></li>
+							<li><a href="{{URL::action('littlehouse@reportesal')}}">Salidas</a></li>
+							<li><a href="{{URL::action('littlehouse@reporteus')}}">Usuarios</a></li>
                         </ul>
                     </li>
                     <li><a href="calendar.html"><i class="glyphicon glyphicon-calendar"></i> Calendario</a></li>
                     <li class="submenu">
                          <a href="#">
-                            <i class="glyphicon glyphicon-list"></i> Cuenta
+                            <i class="glyphicon glyphicon-list"></i><b>Bienvenido: {{Session::get('sesionname')}}</b>
                             <span class="caret pull-right"></span>
                          </a>
                          <!-- Sub menu -->
                          <ul>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="signup.html">Signup</a></li>
+                            
+                            <li><a href="{{URL::action('littlehouse2@cerrarsesion')}}">Cerrar Sesion</a></li>
                         </ul>
                     </li>
                 </ul>

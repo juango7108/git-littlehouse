@@ -62,7 +62,26 @@
 
           <!-- Author -->
           <p class="lead">
-            by
+        <br>
+<b>Bienvenido: {{Session::get('sesionname')}}</b>
+</div>
+<div  id= 'Menu'>
+<h1>Menu</h1>
+@if(Session::get('sesiontipo')=="Admin")
+<a href="{{URL::action('littlehouse@altacliente')}}">
+Alta cliente
+</a>
+@endif
+<br>
+<a href="{{URL::action('littlehouse@reportecliente')}}">
+Reportecliente
+</a>
+<br>
+<a href="{{URL::action('littlehouse2@cerrarsesion')}}">
+Cerrar sesion
+</a>
+ @yield('bienvenida')
+</div>
             <a href="#">Start Bootstrap</a>
           </p>
 
